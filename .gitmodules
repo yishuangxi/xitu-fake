@@ -1,0 +1,3 @@
+[submodule "submodules/AsyncTorndb"]
+	path = submodules/AsyncTorndb
+	url = https://github.com/mayflaver/AsyncTorndb
