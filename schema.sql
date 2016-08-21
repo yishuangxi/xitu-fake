@@ -24,6 +24,8 @@ CREATE TABLE `article` (
   `figure` VARCHAR(256) NOT NULL DEFAULT '' COMMENT '文章配图',
   `type` ENUM('1', '2', '3') DEFAULT '1' NOT NULL COMMENT '文章类型: 1:原创; 2:墙外; 3: 英文',
   `tag` VARCHAR(64) NOT NULL DEFAULT '' COMMENT '文章标签,可为空',
+  `created_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  `updated_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
   PRIMARY KEY (`id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
@@ -82,11 +84,11 @@ insert into `user` (`id`, `username` , `password`, `enabled`, `created_at`, `upd
   (NULL , 'ccc', '111', '1', '2016-08-20 10:10:12', '2016-08-20 10:10:20'),
   (NULL , 'ddd', '111', '1', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
-insert into `article` (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`) VALUES
-  (NULL, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术'),
-  (NULL, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术'),
-  (NULL, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术'),
-  (NULL, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术');
+insert into `article` (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`, `created_at`, `updated_at`) VALUES
+  (NULL, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 insert into `cate` (`id`, `name`, `desc`, `created_at`, `updated_at`) VALUES
   (NULL , '前端', '前端描述', '2016-08-20 10:10:10', '2016-08-20 10:10:20'),

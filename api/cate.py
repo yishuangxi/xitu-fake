@@ -1,6 +1,11 @@
 # coding=utf8
 from base import ApiBase
 from tornado.gen import coroutine, Return
+from service.cate import ServiceCate
+
+class ApiCateBase(ApiBase):
+    def __init__(self, *args, **kwargs):
+        super(ApiCateBase, super).__init__(*args, **kwargs)
 
 
 class ApiCate(ApiBase):

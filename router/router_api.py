@@ -5,6 +5,10 @@ router_api = [
     (r'/api/login', user.ApiLogin),
     (r'/api/logout', user.ApiLogout),
     (r'/api/register', user.ApiRegister),
+    # get 获取user详情
+    (r'/api/user/(\d+)', user.ApiUser),
+    # get 获取users列表
+    (r'/api/users', user.ApiUsers),
 
     # post, 新增
     (r'/api/article', article.ApiArticle),
