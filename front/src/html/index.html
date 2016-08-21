@@ -2,11 +2,539 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index Page</title>
+    <title></title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/index-aside-right.css">
+    <link rel='stylesheet' type="text/css" href="../css/index-header.css">
+    <link rel="stylesheet" type="text/css" href="../css/index-content-2.css">
+    <link rel="stylesheet" type="text/css" href="../css/index-content.css">
+    <link rel="stylesheet" type="text/css" href="../css/index-nav-left.css">
+
 </head>
 <body>
 
-<div>This is a test changed by Rubby</div>
+{% include 'index/header.html'%}
+
+<!--－－－－－－－主要的内容－－－－－－－-->
+<div id='main'>
+    <div class="container clearfix ">
+
+        {%include 'index/aside-nav.html'%}
+
+        <!--－－－－－－－中间内容开始－－－－－－－-->
+        <div class="content-whole">
+            <!--－－－－－－－中间内容 (1)－－－－－－－-->
+            <div class="content" style="display: none">
+                <div class="content-box clearfix">
+                    <!--－－－－－－－内容头部（精选） 开始－－－－－－－-->
+                    <div class="box-title clearfix">
+                        <div class="title-left">精选</div>
+                        <div class="title-right">订阅周报</div>
+                    </div>
+                    <!--－－－－－－－内容 （精选） 内容 开始－－－－－－－-->
+                    <div class="box-entries">
+                        <div class="entry clearfix">
+                            <div class="entry-screenshot float-left">
+                                <img src="http://ac-mhke0kuv.clouddn.com/cad22d4a0c25c5361f08.jpg?imageView/1/w/120/h/120/q/100/format/png">
+                            </div>
+                            <div class="float-left entry-info">
+                                <div class="entries-title">Android 优秀文章收集整理集合</div>
+                                <div class="entries-meta">
+                                    <div class="collection-action action">
+                                        <i>^_^</i>
+                                        <span>719</span>
+                                    </div>
+                                    <div class="action">宇行信</div>
+                                    <div class="action"> ·</div>
+                                    <div class="action">3天前</div>
+                                    <i class="action">...</i>
+                                    <ul class="dropdown-list">
+                                        <li>
+                                            <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <img src="http://gold.xitu.io/images/weibo.svg">
+                                                <span>微博分享</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                                <i>***</i>
+                                                <span>Pocket</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                                <i>***</i>
+                                                <span>Evernote</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <i>***</i>
+                                                <span>分享页面</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entry clearfix">
+                            <div class="entry-screenshot float-left">
+                                <img src="http://gold.xitu.io/images/welcome/entry-default-img@2x.png">
+                            </div>
+                            <div class="float-left entry-info">
+                                <div class="entries-title">前端学习路径</div>
+                                <div class="entries-meta">
+                                    <div class="collection-action action">
+                                        <i>^_^</i>
+                                        <span>548</span>
+                                    </div>
+                                    <div class="action">王子林</div>
+                                    <div class="action"> ·</div>
+                                    <div class="action">5天前</div>
+                                    <i class="action">...</i>
+                                    <ul class="dropdown-list">
+                                        <li>
+                                            <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <img src="http://gold.xitu.io/images/weibo.svg">
+                                                <span>微博分享</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                                <i>***</i>
+                                                <span>Pocket</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                                <i>***</i>
+                                                <span>Evernote</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <i>***</i>
+                                                <span>分享页面</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entry clearfix">
+                            <div class="entry-screenshot float-left">
+                                <img src="http://ac-mhke0kuv.clouddn.com/90f360d2535f5039949c.png?imageView/1/w/120/h/120/q/100/format/png">
+                            </div>
+                            <div class="float-left entry-info">
+                                <div class="entries-title">面试时如何优雅的谈论 OC</div>
+                                <div class="entries-meta">
+                                    <div class="collection-action action">
+                                        <i>^_^</i>
+                                        <span>78</span>
+                                    </div>
+                                    <div class="action">xcvxvxc</div>
+                                    <div class="action"> ·</div>
+                                    <div class="action">6天前</div>
+                                    <i class="action">...</i>
+                                    <ul class="dropdown-list">
+                                        <li>
+                                            <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <img src="http://gold.xitu.io/images/weibo.svg">
+                                                <span>微博分享</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                                <i>***</i>
+                                                <span>Pocket</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                                <i>***</i>
+                                                <span>Evernote</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <i>***</i>
+                                                <span>分享页面</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entry clearfix">
+                            <div class="entry-screenshot float-left">
+                                <img src="http://ac-mhke0kuv.clouddn.com/4c44c21dd1f86a945196.png?imageView/1/w/120/h/120/q/100/format/png">
+                            </div>
+                            <div class="float-left entry-info">
+                                <div class="entries-title">刨根问底 HTTP 和 WebSocket 协议</div>
+                                <div class="entries-meta">
+                                    <div class="collection-action action">
+                                        <i>^_^</i>
+                                        <span>548</span>
+                                    </div>
+                                    <div class="action">Kuikui</div>
+                                    <div class="action"> ·</div>
+                                    <div class="action">1天前</div>
+                                    <i class="action">...</i>
+                                    <ul class="dropdown-list">
+                                        <li>
+                                            <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <img src="http://gold.xitu.io/images/weibo.svg">
+                                                <span>微博分享</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                                <i>***</i>
+                                                <span>Pocket</span>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                                <i>***</i>
+                                                <span>Evernote</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                                <i>***</i>
+                                                <span>分享页面</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--－－－－－－－立即注册开始－－－－－－－-->
+                    <div class="register-entry-box">
+                        <div class="register-box clearfix">
+                            <div class="float-left">
+                                <div class="register-box-title">
+                                    <span class="text-blue">注册</span>掘金，你可以
+                                </div>
+
+                            </div>
+                            <div class="float-left">
+                                <ul class="register-box-ul">
+                                    <li>
+                                        · 第一时间获取最新
+                                        <span class="text-blue">翻译</span>
+                                        的国外
+                                        <span class="text-blue">技术精华</span>
+                                    </li>
+                                    <li>
+                                        · 获取最
+                                        <span class="text-blue">热门</span>
+                                        的技术干货
+                                        <span class="text-blue">周报</span>
+                                    </li>
+                                    <li>
+                                        · 关注感兴趣的
+                                        <span class="text-blue">标签</span>
+                                        ，生成
+                                        <span class="text-blue">个性化信息流</span>
+                                    </li>
+                                    <li>
+                                        · 和
+                                        <span class="text-blue">大牛</span>
+                                        们一起讨论
+                                        <span class="text-blue">新技术</span>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="float-right">
+                                <div class="register-box-button">立即注册</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--－－－－－－－Android 更多开始－－－－－－-->
+                <div class="box-title clearfix">
+                    <div class="title-left">Android</div>
+                    <div class="title-right">Android更多</div>
+                </div>
+                <div class="box-entries">
+                    <div class="entry clearfix">
+                        <div class="entry-screenshot float-left">
+                            <img src="http://ac-mhke0kuv.clouddn.com/cad22d4a0c25c5361f08.jpg?imageView/1/w/120/h/120/q/100/format/png">
+                        </div>
+                        <div class="float-left entry-info">
+                            <div class="entries-title">Android 优秀文章收集整理集合</div>
+                            <div class="entries-meta">
+                                <div class="collection-action action">
+                                    <i>^_^</i>
+                                    <span>719</span>
+                                </div>
+                                <div class="action">宇行信</div>
+                                <div class="action"> ·</div>
+                                <div class="action">3天前</div>
+                                <i class="action action-">...</i>
+                                <ul class="dropdown-list">
+                                    <li>
+                                        <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <img src="http://gold.xitu.io/images/weibo.svg">
+                                            <span>微博分享</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                            <i>***</i>
+                                            <span>Pocket</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                            <i>***</i>
+                                            <span>Evernote</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <i>***</i>
+                                            <span>分享页面</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry clearfix">
+                        <div class="entry-screenshot float-left">
+                            <img src="http://ac-mhke0kuv.clouddn.com/b39ae28bdb5cf5fbd169.png?imageView/1/w/120/h/120/q/100/format/png">
+                        </div>
+                        <div class="float-left entry-info">
+                            <div class="entries-title">前端学习路径</div>
+                            <div class="entries-meta">
+                                <div class="collection-action action">
+                                    <i>^_^</i>
+                                    <span>548</span>
+                                </div>
+                                <div class="action">王子林</div>
+                                <div class="action"> ·</div>
+                                <div class="action">5天前</div>
+                                <i class="action">...</i>
+                                <ul class="dropdown-list">
+                                    <li>
+                                        <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <img src="http://gold.xitu.io/images/weibo.svg">
+                                            <span>微博分享</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                            <i>***</i>
+                                            <span>Pocket</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                            <i>***</i>
+                                            <span>Evernote</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <i>***</i>
+                                            <span>分享页面</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry clearfix">
+                        <div class="entry-screenshot float-left">
+                            <img src="http://ac-mhke0kuv.clouddn.com/4f7d20b0847c00c29fe0.png?imageView/1/w/120/h/120/q/100/format/pngpng">
+                        </div>
+                        <div class="float-left entry-info">
+                            <div class="entries-title">面试时如何优雅的谈论 OC</div>
+                            <div class="entries-meta">
+                                <div class="collection-action action">
+                                    <i>^_^</i>
+                                    <span>78</span>
+                                </div>
+                                <div class="action">xcvxvxc</div>
+                                <div class="action"> ·</div>
+                                <div class="action">6天前</div>
+                                <i class="action">...</i>
+                                <ul class="dropdown-list">
+                                    <li>
+                                        <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <img src="http://gold.xitu.io/images/weibo.svg">
+                                            <span>微博分享</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                            <i>***</i>
+                                            <span>Pocket</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                            <i>***</i>
+                                            <span>Evernote</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <i>***</i>
+                                            <span>分享页面</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry clearfix">
+                        <div class="entry-screenshot float-left">
+                            <img src="http://ac-mhke0kuv.clouddn.com/4c44c21dd1f86a945196.png?imageView/1/w/120/h/120/q/100/format/png">
+                        </div>
+                        <div class="float-left entry-info">
+                            <div class="entries-title">刨根问底 HTTP 和 WebSocket 协议</div>
+                            <div class="entries-meta">
+                                <div class="collection-action action">
+                                    <i>^_^</i>
+                                    <span>548</span>
+                                </div>
+                                <div class="action">Kuikui</div>
+                                <div class="action"> ·</div>
+                                <div class="action">1天前</div>
+                                <i class="action">...</i>
+                                <ul class="dropdown-list">
+                                    <li>
+                                        <a href="http://service.weibo.com/share/share.php?title=%E6%88%91%E5%9C%A8%20%40%E7%A8%80%E5%9C%9F%E5%9C%88%20%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%B9%B2%E8%B4%A7%20-%20Android%20%E4%BC%98%E7%A7%80%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86%E9%9B%86%E5%90%88&url=https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <img src="http://gold.xitu.io/images/weibo.svg">
+                                            <span>微博分享</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://getpocket.com/edit?url=https://github.com/ZQiang94/Andriod-collect-blogs">
+                                            <i>***</i>
+                                            <span>Pocket</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://www.addtoany.com/add_to/evernote?linkurl=https://github.com/ZQiang94/Andriod-collect-blogs&linkname=Android 优秀文章收集整理集合">
+                                            <i>***</i>
+                                            <span>Evernote</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://gold.xitu.io/entry/57adf02ec4c97100546ebc3a">
+                                            <i>***</i>
+                                            <span>分享页面</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--－－－－－－－中间内容 (2)－－－－－－－-->
+            <div class="content">
+                <div class="content-box clearfix">
+                    <div class="entry-box">
+                        <div class="box-title clearfix">
+                            <div class="title-left">关注感兴趣的标签，生成个性化信息流</div>
+                            <a class="title-right">更多标签</a>
+                        </div>
+                        <div class="recommend-tags">
+                            <div class="recommend-tag float-left">
+                                <a class="_blank">
+                                    <img class="tag-img" src="http://ac-mhke0kuv.clouddn.com/7bab0e1e66ea386e6f94.png">
+
+                                    <div class="tag-tex">Android</div>
+                                </a>
+
+                                <div class="tag-button">关注</div>
+                            </div>
+                            <div class="recommend-tag float-left">
+                                <a class="_blank">
+                                    <img class="tag-img" src="http://ac-mhke0kuv.clouddn.com/7a7317267804b016ce78.png">
+
+                                    <div class="tag-tex">gradle</div>
+                                </a>
+
+                                <div class="tag-button">关注</div>
+                            </div>
+                            <div class="recommend-tag float-left">
+                                <a class="_blank">
+                                    <img class="tag-img" src="http://ac-mhke0kuv.clouddn.com/27fabb01ab6daa480a19.png">
+
+                                    <div class="tag-tex">Android Studio</div>
+                                </a>
+
+                                <div class="tag-button">关注</div>
+                            </div>
+                            <div class="recommend-tag float-left">
+                                <a class="_blank">
+                                    <img class="tag-img" src="http://ac-mhke0kuv.clouddn.com/9979306cd7d324ca5a27.png">
+
+                                    <div class="tag-tex">Kotlin</div>
+                                </a>
+
+                                <div class="tag-button">关注</div>
+                            </div>
+                            <div class="recommend-tag float-left">
+                                <a class="_blank">
+                                    <img class="tag-img" src="http://ac-mhke0kuv.clouddn.com/6fb1878f782cd03388f9.png">
+
+                                    <div class="tag-tex">RxJava</div>
+                                </a>
+
+                                <div class="tag-button">关注</div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        {%include 'index/aside-login.html'%}
+
+
+    </div>
+</div>
+
 
 </body>
 </html>
