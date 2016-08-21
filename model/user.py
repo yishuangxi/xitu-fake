@@ -23,7 +23,6 @@ class ModelUser(ModelBase):
 
     @coroutine
     def create(self, username, password, ):
-        enabled = "1"
         sql = '''insert into user (id, username, password, enabled, created_at, updated_at)
                                              values(null, %s, %s, %s, %s, %s)'''
         enabled, now = '1', self.now()

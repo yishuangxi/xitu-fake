@@ -31,7 +31,7 @@ class ApiLogin(ApiUserBase):
         password = self.get_argument('password', None)
 
         user_id = self.srv_user.find_one_by_username_password(username, password)
-        self.set_secure_cookie('user_id', user_id)
+        self.set_cookie('xitu_token', user_id)
         if user_id:
             self.json_ok()
         else:
@@ -41,6 +41,7 @@ class ApiLogin(ApiUserBase):
 class ApiLogout(ApiUserBase):
     @coroutine
     def post(self):
+        self.set_cookie('xitu_token', None)
         self.json_ok()
 
 
@@ -51,7 +52,7 @@ class ApiRegister(ApiUserBase):
         password = self.get_argument('password', None)
 
         # 用户名是否已经被使用
-        data = self.srv_user.find_one_by_username(username)
+        data = yield self.srv_user.find_one_by_username(username)
         if data:
             self.json_err('username: ' + username + '已经被其他人使用了')
 
