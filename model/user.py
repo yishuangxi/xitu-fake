@@ -5,7 +5,7 @@ from tornado.gen import coroutine, Return
 class ModelUser(ModelBase):
     @coroutine
     def find_one_by_username_password(self, username, password):
-        sql = 'select * from user where username=%s, password=%s limit 1'
+        sql = 'select * from user where username=%s and password=%s limit 1'
         res = yield self.get(sql, username, password)
         raise Return(res)
 

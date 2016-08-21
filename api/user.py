@@ -30,10 +30,12 @@ class ApiLogin(ApiUserBase):
         username = self.get_argument('username', None)
         password = self.get_argument('password', None)
 
-        user_id = self.srv_user.find_one_by_username_password(username, password)
-        self.set_cookie('xitu_token', user_id)
+        data = yield self.srv_user.find_one_by_username_password(username, password)
+        user_id = data.id
+        print 'user_id: ' + str(user_id)
+        self.set_cookie('xitu_token', str(user_id))
         if user_id:
-            self.json_ok()
+            self.json_ok(data)
         else:
             self.json_err('用户名或密码错误')
 
