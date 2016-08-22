@@ -31,13 +31,12 @@ class ApiLogin(ApiUserBase):
         password = self.get_argument('password', None)
 
         data = yield self.srv_user.find_one_by_username_password(username, password)
-        user_id = data.id
-        print 'user_id: ' + str(user_id)
-        self.set_cookie('xitu_token', str(user_id))
-        if user_id:
-            self.json_ok(data)
-        else:
+        if not data:
             self.json_err('用户名或密码错误')
+        else:
+            user_id = data.id
+            self.set_cookie('xitu_token', str(user_id))
+            self.json_ok(data)
 
 
 class ApiLogout(ApiUserBase):
@@ -55,12 +54,13 @@ class ApiRegister(ApiUserBase):
 
         # 用户名是否已经被使用
         data = yield self.srv_user.find_one_by_username(username)
+
         if data:
             self.json_err('username: ' + username + '已经被其他人使用了')
-
-        # 注册用户
-        data = self.srv_user.create(username, password)
-        if data:
-            self.json_ok()
         else:
-            self.json_err('注册失败')
+            # 注册用户
+            data = self.srv_user.create(username, password)
+            if data:
+                self.json_ok()
+            else:
+                self.json_err('注册失败')
