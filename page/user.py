@@ -10,3 +10,7 @@ class PageLogin(PageBase):
 class PageRegister(PageBase):
     def get(self):
         self.render('register.html')
+
+class PageUser(PageBase):
+    def get(self, user_id):
+        self.render('user.html')
