@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        img{
+            width: 100px;
+            float: left;
+        }
+
+        div{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<!--<div style="background-color: red;width: 100px;height: 100px;" id="div"></div>-->
+
+
+
+<!--<div style="">-->
+    <!--<img src="http://img13.360buyimg.com/n7/jfs/t2461/281/145335373/97081/8af73dbf/55f0e80aN532efcae.jpg" />-->
+    <!--<h1>iphone 4</h1>-->
+    <!--<p>iphone 4 desc </p>-->
+    <!--<span>4000</span>-->
+<!--</div>-->
+
+
+
+<script>
+    var goodsList = []
+
+    for(var i = 0; i < 100; i++){
+        goodsList.push({
+            image: 'http://img13.360buyimg.com/n7/jfs/t2461/281/145335373/97081/8af73dbf/55f0e80aN532efcae.jpg',
+            name: 'iphone '+i,
+            desc: 'iphhone ' + i + 'de miao shu',
+            price: parseInt(Math.random() * 10000) + '$'
+        })
+    }
+
+
+
+    for(var i = 0; i < goodsList.length; i++){
+        var div = document.createElement('div')
+        var img = document.createElement('img')
+        var h1 = document.createElement('h1')
+        var p = document.createElement('p')
+        var span = document.createElement('span')
+
+
+        var h1Text = document.createTextNode(goodsList[i]['name'])
+        var pText = document.createTextNode(goodsList[i]['desc'])
+        var spanText = document.createTextNode(goodsList[i]['price'])
+
+        img.setAttribute('src', goodsList[i]['image'])
+        h1.appendChild(h1Text)
+        p.appendChild(pText)
+        span.appendChild(spanText)
+
+
+        div.appendChild(img)
+        div.appendChild(h1)
+        div.appendChild(p)
+        div.appendChild(span)
+
+        document.body.appendChild(div)
+
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -11,9 +11,16 @@
         //
         //$.ajax(url,{
         //    method:"GET",
-        //    data:params,
-        //    dataType:"json",
+        //    //data:params,
+        //    //dataType:"json",
+        //    async: true,
         //    success: function(){
+        //        var $user = $('#user')
+        //        var $entryTitle = document.createElement('div')
+        //        var $img = document.createElement('img')
+        //        $entryTitle.innerHTML = "为什么要使用 Node.js"
+        //        $user.append($entryTitle)
+        //        $img.attr=("src", "http://gold.xitu.io/images/welcome/entry-default-img@2x.png")
         //
         //    },
         //    error: function(){
