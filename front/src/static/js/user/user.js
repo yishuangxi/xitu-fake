@@ -4,11 +4,23 @@
 ;
 (function ($) {
     $(function () {
-        var url = '/api/user/100000'
-
+        var url = '/api'+location.pathname;
 
         var startTime = new Date().getTime()
         console.log('我马上要发请求了')
+        //
+        //$.ajax(url,{
+        //    method:"GET",
+        //    data:params,
+        //    dataType:"json",
+        //    success: function(){
+        //
+        //    },
+        //    error: function(){
+        //
+        //    }
+        //});
+
         $.ajax(url, {
             method: 'GET',
             async: true,

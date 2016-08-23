@@ -16,13 +16,15 @@
 </head>
 <body>
 
-{% include 'index/header.html'%}
+@@include('index/header.html')
+
+
 
 <!--－－－－－－－主要的内容－－－－－－－-->
 <div id='main'>
     <div class="container clearfix ">
 
-        {%include 'index/aside-nav.html'%}
+        @@include('index/aside-nav.html')
 
         <!--－－－－－－－中间内容开始－－－－－－－-->
         <div class="content-whole">
@@ -529,7 +531,7 @@
 
         </div>
 
-        {%include 'index/aside-login.html'%}
+        @@include('index/aside-login.html')
 
 
     </div>
