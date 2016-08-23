@@ -13,19 +13,19 @@ class ModelArticle(ModelBase):
     @coroutine
     def find_page_by_cate(self, cate_id, article_id, count=10):
         sql = '''select * from article'''
-        data = yield self.get(sql)
+        data = yield self.query(sql)
         raise Return(data)
 
     @coroutine
     def find_page_latest(self, article_id, count=10):
         sql = '''select * from article'''
-        data = yield self.get(sql)
+        data = yield self.query(sql)
         raise Return(data)
 
     @coroutine
     def find_page_hottest(self, article_id):
         sql = '''select * from article'''
-        data = yield self.get(sql)
+        data = yield self.query(sql)
         raise Return(data)
 
     @coroutine

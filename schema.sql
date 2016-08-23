@@ -52,6 +52,18 @@ CREATE TABLE `comment` (
   KEY (`article_id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
+#点赞表
+CREATE TABLE `like` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '',
+  `article_id` INT(10) UNSIGNED NOT NULL COMMENT '目标文章ID',
+  `user_id` INT(10) UNSIGNED NOT NULL COMMENT '用户ID',
+  `created_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  `updated_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  PRIMARY KEY (`id`),
+  KEY (`article_id`, `user_id`),
+  KEY (`article_id`)
+) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
+
 # 文章-分类-关系表: 一对多
 CREATE TABLE `r_article_cate` (
   `article_id` INT(10) UNSIGNED NOT NULL ,
@@ -61,13 +73,6 @@ CREATE TABLE `r_article_cate` (
   KEY(`cate_id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
-# 文章-评论-关系表: 多对多
-# CREATE TABLE `r_article_comment` (
-#   `article_id` INT(10) UNSIGNED NOT NULL ,
-#   `comment_id` INT(10) UNSIGNED NOT NULL ,
-#   PRIMARY KEY (`article_id`, `user_id`),
-#   KEY (`article_id`)
-# ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
 # 文章-点赞-关系表
 CREATE TABLE `r_article_like` (
@@ -78,19 +83,21 @@ CREATE TABLE `r_article_like` (
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
 
-insert into `user` (`id`, `username` , `password`, `enabled`, `created_at`, `updated_at`) VALUES
+INSERT INTO `user` (`id`, `username` , `password`, `enabled`, `created_at`, `updated_at`) VALUES
   (NULL , 'aaa', '111', '1', '2016-08-20 10:10:10', '2016-08-20 10:10:20'),
   (NULL , 'bbb', '111', '1', '2016-08-20 10:10:11', '2016-08-20 10:10:20'),
   (NULL , 'ccc', '111', '1', '2016-08-20 10:10:12', '2016-08-20 10:10:20'),
   (NULL , 'ddd', '111', '1', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
-insert into `article` (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`, `created_at`, `updated_at`) VALUES
-  (NULL, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (NULL, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (NULL, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (NULL, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
+INSERT INTO `article` (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`, `created_at`, `updated_at`) VALUES
+  (1, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (2, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (3, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (4, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041', '文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1', '技术', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
-insert into `cate` (`id`, `name`, `desc`, `created_at`, `updated_at`) VALUES
+INSERT INTO `r_article_cate` (`article_id`, `cate_id`) VALUES (1, 1), (2, 2), (3, 2), (4, 1);
+
+INSERT INTO `cate` (`id`, `name`, `desc`, `created_at`, `updated_at`) VALUES
   (NULL , '前端', '前端描述', '2016-08-20 10:10:10', '2016-08-20 10:10:20'),
   (NULL , '设计', '设计描述', '2016-08-20 10:10:11', '2016-08-20 10:10:20'),
   (NULL , '后端', '后端描述', '2016-08-20 10:10:12', '2016-08-20 10:10:20'),

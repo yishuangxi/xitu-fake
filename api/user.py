@@ -35,15 +35,16 @@ class ApiLogin(ApiUserBase):
             self.json_err('用户名或密码错误')
         else:
             user_id = data.id
-            self.set_cookie('xitu_token', str(user_id))
+            self.set_current_user(user_id)
             self.json_ok(data)
 
 
 class ApiLogout(ApiUserBase):
     @coroutine
     def post(self):
-        self.set_cookie('xitu_token', None)
-        self.json_ok()
+        user_id = self.get_cookie('user_id')
+        self.logout_current_user()
+        self.json_ok(user_id)
 
 
 class ApiRegister(ApiUserBase):

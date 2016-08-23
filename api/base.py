@@ -1,12 +1,28 @@
 # coding=utf8
 from tornado.web import RequestHandler
+from tornado.gen import coroutine, Return
 import json
 from datetime import date, datetime
+from service.user import ServiceUser
 
 
 class ApiBase(RequestHandler):
     def __init__(self, *args, **kwargs):
         super(ApiBase, self).__init__(*args, **kwargs)
+        self.srv_user = ServiceUser()
+
+    @coroutine
+    def get_current_user(self):
+        user = yield self.srv_user.find_one_by_id(self.get_cookie('user_id'))
+        raise Return(user)
+
+    @coroutine
+    def set_current_user(self, user_id):
+        self.set_cookie('user_id', str(user_id))
+
+    @coroutine
+    def logout_current_user(self):
+        self.clear_cookie('user_id')
 
     def json_ok(self, data='', msg=''):
         callback = self.get_argument('callback', False)
