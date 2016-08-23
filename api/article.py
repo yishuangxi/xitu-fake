@@ -25,7 +25,7 @@ class ApiArticle(ApiArticleBase):
         tag = self.get_argument('tag', None)
         cate_id = self.get_argument('cate_id', None)
 
-        user_id = self.get_user_id()
+        user_id = self.get_cookie('user_id')
 
         data = self.srv_article.create(title, link, desc, figure, _type, tag, cate_id)
         self.json_ok(data)
