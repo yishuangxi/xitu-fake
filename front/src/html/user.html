@@ -3,12 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        body,div,a,span,img,button,ul,li{
+            margin: 0;
+            border: 0;
+        }
+        a,img,button{
+            display: block;
+        }
+        .user{
+            width: 100%;
+            height: 689px;
+            background-color: #f8f9fa;
+            margin-top: 80px;
+        }
+        .user-info-box{
+            width: 960px;
+            padding: 16px 0 16px 0;
+            margin: auto;
+        }
+        .user-info-box-img{
+            width: 86px;
+            margin: auto;
+            padding: 20px 0 20px 0;
+            border-radius: 50%;
+        }
+        .user-name{
+            font-size: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-bottom: 16px;
+        }
+        .user-role{
+            position: absolute;
+            float: left;
+            background-color: #d3d6d8;
+            color: white;
+            border-radius: 2px;
+            font-size: 12px;
+            padding: 4px 10px 4px 10px;
+            margin-left: 5px;
+        }
+        .github-icon{
+            float: right;
+            position: absolute;
+            right: 320px;
+            border-radius: 70%;
+            background-color: #d3d6d8;
+        }
+        .user-action-btn{
+            margin: auto;
+            font-size: 14px;
+            border: 1px solid #333;
+            padding: 7px 32px 7px 32px;
+            border-radius: 2px;
+            background-color: #f8f9fa;
+        }
+        .user-action-btn:hover{
+            background-color: #f4f6f3;
+        }
+        .user-meta{
+            color: #8b8b8b;
+            font-size: 13px;
+            margin: auto;
+            text-align: center;
+            margin-top: 16px;
+        }
+        .user-state{
+            width: 90%;
+            height: 48px;
+            margin: auto;
+            background-color: white;
+            margin-top: 32px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .collection{
+            color: #2b445d;
+            font-weight: 600;
+            float: left;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .user-state-hot{
+            float: right;
+            padding: 15px;
+            font-size: 14px;
+            color: #909090;
+        }
+        .user-state-hot:hover{
+            color: #333;
+        }
+        .user-state-newest{
+            color: #2b445d;
+            font-weight: 600;
+            float: right;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .entries{
+            width: 90%;
+            margin: auto;
+            padding: 16px 0 16px 0;
+            background-color: white;
+        }
+        .entries-box{
+            height: 92px;
+            padding: 0 24px 0 24px;
+        }
+        .entries-box:hover{
+            background-color: rgba(248,249,250,.5);
+        }
+
+
+
+
+    </style>
 </head>
 <body>
 
-<div>header </div>
+<div class="user">
+    <div class="user-info-box">
+        <div class="user-role">申请联合编辑</div>
+        <div>
+            <img class="github-icon" src="http://gold.xitu.io/images/welcome/github-white.svg">
+        </div>
+        <img class="user-info-box-img" src="https://avatars.githubusercontent.com/u/20039479?v=3">
+        <div class="user-name">ningfeijian</div>
+        <button class="user-action-btn">设置</button>
+        <div class="user-meta">
+            关注
+            5
+            人
+        </div>
+        <div class="user-state">
+            <div class="collection">收藏</div>
+            <div class="user-state-newest">最新</div>
+            <div class="user-state-hot">热门</div>
+        </div>
 
-<div id="user" style="border: 1px solid red;"></div>
+        <div class="entries">
+            <div class="entries-box"></div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<div></div>
 
 
 <script type="text/javascript" src="/static/js/global/jquery.js"></script>
