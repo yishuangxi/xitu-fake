@@ -21,7 +21,7 @@ class ServiceArticle(ServiceBase):
         raise Return(data)
 
     @coroutine
-    def create(self, title, link, desc, figure, _type, tag, cate_id):
-        data = yield self.model_article.create(title, link, desc, figure, _type, tag, cate_id)
+    def create(self, title, link, desc, figure, _type, tag, cate_id, user_id):
+        data = yield self.model_article.create(title, link, desc, figure, _type, tag, cate_id, user_id)
         raise Return(data)
 
