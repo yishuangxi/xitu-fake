@@ -15,9 +15,14 @@ gulp.task('fileinclude', function() {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('static', function(){
+    gulp.src(['src/static/**'])
+        .pipe(gulp.dest('dist/static'))
+})
+
 
 gulp.task('webserver', function() {
-    gulp.src('./')
+    gulp.src('./dist')
         .pipe(webserver({
             livereload: true,
             directoryListing: true,
@@ -27,7 +32,7 @@ gulp.task('webserver', function() {
 
 
 gulp.task('watch', function() {
-    gulp.watch(['src/html/*.html','src/html/index/*.html','src/html/user/*.html'], ['fileinclude']);
+    gulp.watch(['src/html/*.html','src/html/index/*.html','src/html/user/*.html','src/html/user/*.js', 'static/**/*'], ['fileinclude', 'static']);
 });
 
 //gulp.task('minify', function() {
@@ -36,4 +41,4 @@ gulp.task('watch', function() {
 //        .pipe(gulp.dest('dist'))
 //});
 
-gulp.task('default', ['fileinclude', 'webserver','watch']);
+gulp.task('default', ['static', 'fileinclude', 'webserver','watch']);
