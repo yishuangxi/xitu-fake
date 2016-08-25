@@ -14,3 +14,7 @@ class PageRegister(PageBase):
 class PageUser(PageBase):
     def get(self, user_id):
         self.render('user.html')
+
+class PageMe(PageBase):
+    def get(self):
+        self.render('user.html')
