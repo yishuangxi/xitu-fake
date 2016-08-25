@@ -13,7 +13,11 @@ class ApiBase(RequestHandler):
 
     @coroutine
     def get_current_user(self):
-        user = yield self.srv_user.find_one_by_id(self.get_cookie('user_id'))
+        user_id = self.get_cookie('user_id')
+        if user_id:
+            user = yield self.srv_user.find_one_by_id()
+        else:
+            user = None
         raise Return(user)
 
     @coroutine
