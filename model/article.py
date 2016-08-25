@@ -29,14 +29,12 @@ class ModelArticle(ModelBase):
         raise Return(data)
 
     @coroutine
-    def create(self, title, link, desc, figure, _type, tag, cate_id):
-        sql = '''insert into article (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`, `created_at`, `updated_at`)
-                                             values(null, %s, %s, %s, %s, %s, %s, %s, %s)'''
+    def create(self, title, link, desc, figure, _type, tag, cate_id, user_id):
+        sql = '''insert into article (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`, `cate_id`,`user_id`, `created_at`, `updated_at`)
+                                             values(null, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
         now = self.now()
-        article_id = yield self.insert(sql, title, link, desc, figure, _type, tag, now, now)
-        relation = self._create_relation_article_cate(article_id, cate_id)
-        print 'relation=============='
-        print relation
+        article_id = yield self.insert(sql, title, link, desc, figure, _type, tag, cate_id, user_id, now, now)
+
         raise Return(article_id)
 
     #创建article_cate关系
