@@ -43,7 +43,7 @@ class ApiArticles(ApiArticleBase):
     @coroutine
     def get(self):
         count = self.get_argument('count', 10)
-        article_id = self.get_argument('article_id', None)
+        article_id = self.get_argument('article_id', 0)
         cate_id = self.get_argument('cate_id', None)
 
         data = yield self.srv_article.find_page_by_cate(cate_id, article_id, count)
