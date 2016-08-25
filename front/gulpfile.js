@@ -32,7 +32,7 @@ gulp.task('webserver', function() {
 
 
 gulp.task('watch', function() {
-    gulp.watch(['src/html/*.html','src/html/index/*.html','src/html/user/*.html','src/html/user/*.js', 'static/**/*'], ['fileinclude', 'static']);
+    gulp.watch(['src/html/*.html','src/html/index/*.html','src/html/user/*.html','src/html/user/*.js', 'static/**/*/*'], ['fileinclude', 'static']);
 });
 
 //gulp.task('minify', function() {
