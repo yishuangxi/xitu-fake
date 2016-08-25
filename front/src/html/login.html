@@ -38,6 +38,7 @@
         $('.login-button').click(function () {
             var username = $('[data-sel=username]').val()
             var password = $('[data-sel=password]').val()
+            console.log(username)
             $.post('/api/login', {
                 username: username,
                 password: password
