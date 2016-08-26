@@ -61,6 +61,8 @@
     font-size: 0.8em;
 }
 
+.entries-meta >i{display:none;}
+
 .action {
     color: #909090;
     display: inline-block;

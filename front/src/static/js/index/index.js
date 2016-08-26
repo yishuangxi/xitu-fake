@@ -7,6 +7,7 @@ $(function () {
             console.log(response)
             var html = template('test', response)
             $('.box-entries').append(html)
+
         },
         error: function () {
 
