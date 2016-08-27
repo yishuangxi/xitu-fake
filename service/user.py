@@ -27,6 +27,11 @@ class ServiceUser(ServiceBase):
         raise Return(data)
 
     @coroutine
+    def find_page(self, following_id, page):
+        res = yield self.model_user.find_page(following_id, page)
+        raise Return(res)
+
+    @coroutine
     def create(self, username, password):
         res = yield self.model_user.create(username, password)
         raise Return(res)

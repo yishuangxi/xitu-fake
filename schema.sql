@@ -56,26 +56,38 @@ CREATE TABLE `comment` (
 
 
 #用户关注表: 多对多关系表
-CREATE TABLE `r_following_user` (
-  `following_id` INT(10) NOT NULL COMMENT '被关注-用户id',
-  `user_id` INT(10) NOT NULL COMMENT '主动关注-用户id',
-  PRIMARY KEY (`following_id`, `user_id`)
+CREATE TABLE `r_follow_user` (
+  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `followed_id` INT(10) NOT NULL COMMENT '被关注-用户id',
+  `following_id` INT(10) NOT NULL COMMENT '主动关注-用户id',
+  `created_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  `updated_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY (`followed_id`, `following_id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
 
 #分类关注表:多对多关系表
 CREATE TABLE `r_cate_user` (
+  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `cate_id` INT(10) NOT NULL COMMENT '被关注-分类id',
   `user_id` INT(10) NOT NULL COMMENT '主动关注-用户id',
-  PRIMARY KEY (`cate_id`, `user_id`)
+  `created_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  `updated_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY (`cate_id`, `user_id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
 
 #文章阅读表:
 CREATE TABLE `read` (
+  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `article_id` INT(10) NOT NULL COMMENT '',
   `user_id` INT(10) NOT NULL COMMENT '',
-  PRIMARY KEY (`cate_id`, `user_id`)
+  `created_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  `updated_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY (`cate_id`, `user_id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
 #点赞表
@@ -129,5 +141,12 @@ INSERT INTO `cate` (`id`, `name`, `desc`, `created_at`, `updated_at`) VALUES
   (4 , 'android', '安卓描述', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 
-INSERT INTO `r_cate_user` (`cate_id`, `user_id`) VALUES (1, 100000), (2, 100000), (3, 100000), (1, 100001);
+INSERT INTO `r_cate_user` (`id`, `cate_id`, `user_id`, `created_at`, `updated_at`) VALUES
+  (NULL , 1, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,2, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL , 3, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,1, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
+
+INSERT INTO `r_follow_user` (`id`, `followed_id`, `following_id`, `created_at`, `updated_at`) VALUES
+  (NULL ,100001, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,100002, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL ,100003, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,100000, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL ,100002, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 

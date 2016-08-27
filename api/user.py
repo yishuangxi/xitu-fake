@@ -23,7 +23,10 @@ class ApiUser(ApiUserBase):
 class ApiUsers(ApiUserBase):
     @coroutine
     def get(self, *args, **kwargs):
-        self.json_ok()
+        page = self.get_argument('page', 1)
+        following_id = self.get_argument('following_id', None)
+        data = yield self.srv_user.find_page(following_id, page)
+        self.json_ok(data)
 
 class ApiMe(ApiUserBase):
     @login
