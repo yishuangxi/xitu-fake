@@ -13,5 +13,5 @@ class ModelCate(ModelBase):
     @coroutine
     def find_all(self):
         sql = 'select * from cate'
-        res = yield self.get(sql)
+        res = yield self.query(sql)
         raise Return(res)

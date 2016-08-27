@@ -11,9 +11,14 @@ class ModelArticle(ModelBase):
         raise Return(data)
 
     @coroutine
-    def find_page_by_cate(self, cate_id, article_id, count=10):
-        sql = '''select * from article'''
-        data = yield self.query(sql)
+    def find_page_by_cate(self, cate_id=None, article_id=0, count=10):
+        if cate_id:
+            sql = '''select * from article where id > %s and cate_id=%s limit %s'''
+            data = yield self.query(sql, article_id, cate_id, count)
+        else:
+            sql = '''select * from article where id > %s limit %s'''
+            data = yield self.query(sql, article_id, count)
+
         raise Return(data)
 
     @coroutine

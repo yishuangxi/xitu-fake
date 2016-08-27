@@ -1,4 +1,4 @@
-# coding = utf8
+# coding=utf8
 from base import ApiBase
 from service.article import ServiceArticle
 from tornado.gen import coroutine, Return
@@ -25,8 +25,11 @@ class ApiArticle(ApiArticleBase):
         tag = self.get_argument('tag', None)
         cate_id = self.get_argument('cate_id', None)
 
-        user_id = yield self.get_current_user().id
-
+        user = yield self.get_current_user()
+        if not user:
+            self.json_err('你还未登录')
+            return
+        user_id = user.id
         data = yield self.srv_article.create(title, link, desc, figure, _type, tag, cate_id, user_id)
         self.json_ok(data)
 
@@ -43,7 +46,7 @@ class ApiArticles(ApiArticleBase):
     @coroutine
     def get(self):
         count = self.get_argument('count', 10)
-        article_id = self.get_argument('article_id', None)
+        article_id = self.get_argument('article_id', 0)
         cate_id = self.get_argument('cate_id', None)
 
         data = yield self.srv_article.find_page_by_cate(cate_id, article_id, count)
