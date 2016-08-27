@@ -128,10 +128,10 @@ INSERT INTO `user` (`id`, `username` , `password`, `enabled`, `created_at`, `upd
   (NULL , 'ddd', '111', '1', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 INSERT INTO `article` (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`,`cate_id`, `user_id`,`created_at`, `updated_at`) VALUES
-  (NULL, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 1, 1, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (NULL, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 2, 2, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (NULL, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 1, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (NULL, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 2, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
+  (NULL, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 1, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 2, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 100003, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 
 INSERT INTO `cate` (`id`, `name`, `desc`, `created_at`, `updated_at`) VALUES

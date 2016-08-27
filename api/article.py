@@ -14,8 +14,9 @@ class ApiArticleBase(ApiBase):
 class ApiArticle(ApiArticleBase):
     @coroutine
     def get(self, article_id):
-        self.json_ok({"title": "title 1", "content": "content 1"})
+        self.json_ok("这是测试数据")
 
+    @login
     @coroutine
     def post(self):
         title = self.get_argument('title', None)
@@ -25,12 +26,8 @@ class ApiArticle(ApiArticleBase):
         _type = self.get_argument('type', None)
         tag = self.get_argument('tag', None)
         cate_id = self.get_argument('cate_id', None)
+        user_id = self.get_current_user_id()
 
-        user = yield self.get_current_user()
-        if not user:
-            self.json_err('你还未登录')
-            return
-        user_id = user.id
         data = yield self.srv_article.create(title, link, desc, figure, _type, tag, cate_id, user_id)
         self.json_ok(data)
 
