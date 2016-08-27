@@ -4,6 +4,8 @@ from base import ApiBase
 from tornado.gen import coroutine, Return
 from service.user import ServiceUser
 
+from decorator.auth import login
+
 
 class ApiUserBase(ApiBase):
     def __init__(self, *args, **kwargs):
@@ -22,6 +24,16 @@ class ApiUsers(ApiUserBase):
     @coroutine
     def get(self, *args, **kwargs):
         self.json_ok()
+
+class ApiMe(ApiUserBase):
+    @login
+    @coroutine
+    def get(self):
+        user = yield self.get_current_user()
+        user_id = user.id
+        print 'user_id: ' + str(user_id)
+        data = yield self.srv_user.find_one_by_id(user_id)
+        self.json_ok(data)
 
 
 class ApiLogin(ApiUserBase):
