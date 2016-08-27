@@ -24,7 +24,7 @@
 }
 
 .entry {
-
+cursor:pointer;
 }
 
 .entry:hover {
@@ -62,6 +62,7 @@
 }
 
 .entries-meta >i{display:none;}
+.entry:hover .entries-meta >i{display:inline-block;}
 
 .action {
     color: #909090;

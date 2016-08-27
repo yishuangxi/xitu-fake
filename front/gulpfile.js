@@ -21,13 +21,18 @@ gulp.task('css', function(){
     gulp.src('src/static/css/**/*.css')
         .pipe(gulp.dest('dist/static/css'))
 })
+gulp.task('js',function(){
+    gulp.src('src/static/js/**/*.js')
+        .pipe(gulp.dest('dist/static/js'))
+})
 
 
 gulp.task('watch', function(){
     gulp.watch(['src/html/**/*.html'], ['html'])
     gulp.watch(['src/static/css/**/*.css'], ['css'])
+    gulp.watch(['src/static/js/**/*.js'], ['js'])
 })
 
-gulp.task('build', ['html', 'css'])
+gulp.task('build', ['html', 'css','js'])
 
 gulp.task('default', ['build', 'watch'])

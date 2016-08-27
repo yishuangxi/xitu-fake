@@ -28,20 +28,43 @@ $(function () {
     });
 
 
-    var $i = $('i').filter('.action')
-    $i.hover(function () {
+
+
+    $(document).on('mouseover', '[data-sel=action]', function(event){
+        console.log('mouseover')
+        var $i = $('[data-sel=action]')
         var $iIndex = $i.index(this)
         console.log($iIndex)
         $i.next().eq($iIndex).css("display", "block")
-    }, function () {
-        var $iIndex = $i.index(this)
-        $i.next().eq($iIndex).css("display", "none")
     })
 
-    $('.hd-Login').click(function () {
+
+
+    $(document).on('mouseout', '[data-sel=action]', function(event){
+        console.log('mouseout')
+        var $i = $('[data-sel=action]')
+        var $iIndex = $i.index(this)
+        console.log($iIndex)
+        $i.next().eq($iIndex).css("display", "none")
+
+    })
+
+
+
+    //
+    //$('[data-sel=action]').click(function(){
+    //
+    //})
+    //
+    //$(document).on('click', '[data-sel=hd-login]')
+
+    $('.hd-Login').click(function () {     //点击登陆打开登陆弹框
         console.log(11100)
+        $('[login="user"]').css('display','block')
     })
 
 
 })();
+
+
 
