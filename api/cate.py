@@ -18,5 +18,6 @@ class ApiCate(ApiCateBase):
 class ApiCates(ApiCateBase):
     @coroutine
     def get(self):
-        data = yield self.srv_cate.find_all()
+        user_id = self.get_argument('user_id', None)
+        data = yield self.srv_cate.find_all(user_id)
         self.json_ok(data)

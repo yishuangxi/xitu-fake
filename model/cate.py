@@ -11,7 +11,14 @@ class ModelCate(ModelBase):
         raise Return(res)
 
     @coroutine
-    def find_all(self):
-        sql = 'select * from cate'
-        res = yield self.query(sql)
+    def find_all(self, user_id=None):
+        if user_id:
+            sql = 'select a.*, b.user_id from cate a ' \
+                  'INNER JOIN r_cate_user b ' \
+                  'ON a.id =b.cate_id ' \
+                  'WHERE b.user_id=%s';
+            res = yield self.query(sql, user_id)
+        else:
+            sql = 'select * from cate'
+            res = yield self.query(sql)
         raise Return(res)

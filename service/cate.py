@@ -16,7 +16,7 @@ class ServiceCate(ServiceBase):
         raise Return(res)
     
     @coroutine
-    def find_all(self):
-        data = yield self.model_cate.find_all()
+    def find_all(self, user_id):
+        data = yield self.model_cate.find_all(user_id)
         raise Return(data)
 
