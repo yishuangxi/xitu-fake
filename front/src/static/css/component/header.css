@@ -42,42 +42,42 @@
 }
 
 .nav-img1 {
-    background: url("../image/1.png");
+    background: url("/static/image/1.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img1:hover {
-    background: url("../image/11.png");
+    background: url("/static/image/11.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img2 {
-    background: url("../image/2.png");
+    background: url("/static/image/2.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img2:hover {
-    background: url("../image/22.png");
+    background: url("/static/image/22.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img3 {
-    background: url("../image/3.png");
+    background: url("/static/image/3.png");
     width: 18px;
     height: 22px;
     background-repeat: no-repeat;
 }
 
 .nav-img3:hover {
-    background: url("../image/33.png");
+    background: url("/static/image/33.png");
     width: 18px;
     height: 22px;
     background-repeat: no-repeat;

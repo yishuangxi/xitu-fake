@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="../css/login-page.css">
-</head>
-<body>
 
-<div class="welcome-hero-cover open">
+
+<div class="welcome-hero-cover open" login="user">
     <div class="login">
-        <i>X</i>
+        <i login="shut-down">X</i>
         <div class="login-content">
             <label class="login-label">登录</label>
             <p><input class="login-phone-input" type="text" data-sel="username" placeholder="邮箱/手机"></p>
@@ -32,38 +25,3 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/static/js/global/jquery.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('.login-button').click(function () {
-            var username = $('[data-sel=username]').val()
-            var password = $('[data-sel=password]').val()
-            console.log(username)
-            $.post('/api/login', {
-                username: username,
-                password: password
-            }).done(function(data){
-                console.log(data)
-            })
-//
-//            $.post('/api/login',
-//                    {
-//                        username: username,
-//                        password: password
-//                    }, function (data) {
-//                        console.log(data)
-//                    })
-
-
-        })
-
-        $('[data-sel=logout]').click(function () {
-            $.post('/api/logout', {
-            }).done(function(data){
-                console.log(data)
-            })
-        })
-    })
-</script>
-</body>
-</html>
