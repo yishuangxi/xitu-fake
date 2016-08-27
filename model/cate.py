@@ -13,10 +13,10 @@ class ModelCate(ModelBase):
     @coroutine
     def find_all(self, user_id=None):
         if user_id:
-            sql = 'select a.*, b.user_id from cate a ' \
-                  'INNER JOIN r_cate_user b ' \
+            sql = 'select a.*, b.following_id from cate a ' \
+                  'INNER JOIN r_follow_cate b ' \
                   'ON a.id =b.cate_id ' \
-                  'WHERE b.user_id=%s';
+                  'WHERE b.following_id=%s';
             res = yield self.query(sql, user_id)
         else:
             sql = 'select * from cate'

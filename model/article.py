@@ -48,3 +48,17 @@ class ModelArticle(ModelBase):
         sql = '''insert into r_article_cate (`article_id`, `cate_id`) values (%s, %s)'''
         data = yield self.insert(sql, article_id, cate_id)
         raise Return(data)
+
+    @coroutine
+    def find_page_by_user_id(self, user_id, page=1):
+        count = 10
+        start = (page -1) * count
+        end = start + count
+
+        sql = 'select a.* from article a ' \
+              'INNER JOIN `read` b ' \
+              'ON a.id=b.article_id ' \
+              'WHERE b.user_id=%s limit %s, %s'
+
+        data = yield self.query(sql, user_id, start, end)
+        raise Return(data)

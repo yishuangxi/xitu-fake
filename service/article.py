@@ -25,3 +25,8 @@ class ServiceArticle(ServiceBase):
         data = yield self.model_article.create(title, link, desc, figure, _type, tag, cate_id, user_id)
         raise Return(data)
 
+    @coroutine
+    def find_page_by_user_id(self, user_id, page):
+        res = yield self.model_article.find_page_by_user_id(user_id, page)
+        raise Return(res)
+
