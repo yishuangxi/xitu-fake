@@ -5,16 +5,19 @@ from service.cate import ServiceCate
 
 class ApiCateBase(ApiBase):
     def __init__(self, *args, **kwargs):
-        super(ApiCateBase, super).__init__(*args, **kwargs)
+        super(ApiCateBase, self).__init__(*args, **kwargs)
+        self.srv_cate = ServiceCate()
 
 
-class ApiCate(ApiBase):
+class ApiCate(ApiCateBase):
     @coroutine
     def get(self, cate_id):
         self.json_ok({"id": cate_id})
 
 
-class ApiCates(ApiBase):
+class ApiCates(ApiCateBase):
     @coroutine
     def get(self):
-        self.json_ok([{"id": 1, "name": "qianduan"}, {"id": 2, "name": "design"}])
+        user_id = self.get_argument('user_id', None)
+        data = yield self.srv_cate.find_all(user_id)
+        self.json_ok(data)

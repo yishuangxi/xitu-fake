@@ -12,11 +12,11 @@ class ServiceCate(ServiceBase):
 
     @coroutine
     def find_one_by_id(self, cate_id):
-        res = yield self.model_cate.find_one_by_id(cate_id=cate_id)
+        res = yield self.model_cate.find_one_by_id(cate_id)
         raise Return(res)
     
     @coroutine
-    def find_all(self):
-        data = yield self.model_cate.find_all()
+    def find_all(self, user_id):
+        data = yield self.model_cate.find_all(user_id)
         raise Return(data)
 

@@ -13,16 +13,16 @@ class ApiBase(RequestHandler):
 
     @coroutine
     def get_current_user(self):
-        user_id = self.get_cookie('user_id')
+        user_id = self.get_cookie('xitu_token')
         if user_id:
-            user = yield self.srv_user.find_one_by_id()
+            user = yield self.srv_user.find_one_by_id(user_id)
         else:
             user = None
         raise Return(user)
 
     @coroutine
     def set_current_user(self, user_id):
-        self.set_cookie('user_id', str(user_id))
+        self.set_cookie('xitu_token', str(user_id))
 
     @coroutine
     def logout_current_user(self):

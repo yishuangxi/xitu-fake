@@ -11,7 +11,7 @@ class ModelBase(object):
     def __get_connection(self):
         conn = asynctorndb.Connection(host=config_mysql.get('host'), database=config_mysql.get('database'),
                                       user=config_mysql.get('user'),
-                                      passwd=config_mysql.get('password'))
+                                      passwd=config_mysql.get('password'), charset="utf8")
         yield conn.connect()
         raise Return(conn)
 
