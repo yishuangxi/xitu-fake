@@ -2,6 +2,7 @@
 from base import ApiBase
 from service.article import ServiceArticle
 from tornado.gen import coroutine, Return
+from decorator.auth import login
 
 
 class ApiArticleBase(ApiBase):
@@ -52,3 +53,11 @@ class ApiArticles(ApiArticleBase):
         data = yield self.srv_article.find_page_by_cate(cate_id, article_id, count)
 
         self.json_ok(data)
+
+class ApiArticlesRead(ApiArticleBase):
+    @coroutine
+    def get(self, user_id):
+        page = self.get_argument('page', 1)
+        data = yield self.srv_article.find_page_by_user_id(user_id, page)
+        self.json_ok(data)
+

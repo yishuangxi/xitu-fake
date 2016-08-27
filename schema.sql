@@ -68,14 +68,14 @@ CREATE TABLE `r_follow_user` (
 
 
 #分类关注表:多对多关系表
-CREATE TABLE `r_cate_user` (
+CREATE TABLE `r_follow_cate` (
   `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `cate_id` INT(10) NOT NULL COMMENT '被关注-分类id',
-  `user_id` INT(10) NOT NULL COMMENT '主动关注-用户id',
+  `following_id` INT(10) NOT NULL COMMENT '主动关注-用户id',
   `created_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
   `updated_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
   PRIMARY KEY (`id`),
-  UNIQUE KEY (`cate_id`, `user_id`)
+  UNIQUE KEY (`cate_id`, `following_id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
 
@@ -87,7 +87,7 @@ CREATE TABLE `read` (
   `created_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
   `updated_at` DATETIME NOT NULL DEFAULT NOW() COMMENT '',
   PRIMARY KEY (`id`),
-  UNIQUE KEY (`cate_id`, `user_id`)
+  UNIQUE KEY (`article_id`, `user_id`)
 ) ENGINE=innodb DEFAULT CHARSET=UTF8 AUTO_INCREMENT=100000;
 
 #点赞表
@@ -128,10 +128,10 @@ INSERT INTO `user` (`id`, `username` , `password`, `enabled`, `created_at`, `upd
   (NULL , 'ddd', '111', '1', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 INSERT INTO `article` (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`,`cate_id`, `user_id`,`created_at`, `updated_at`) VALUES
-  (1, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 1, 1, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (2, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 2, 2, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (3, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 1, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
-  (4, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 2, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
+  (NULL, '技术正宗与野路子1', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述1', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 1, 1, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子2', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述2', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 2, 2, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子3', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述3', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 1, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL, '技术正宗与野路子4', 'http://gold.xitu.io/post/57ab4bd32e958a0066cf7041','文章描述4', 'http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg', '1','技术', 3, 2, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 
 INSERT INTO `cate` (`id`, `name`, `desc`, `created_at`, `updated_at`) VALUES
@@ -141,11 +141,16 @@ INSERT INTO `cate` (`id`, `name`, `desc`, `created_at`, `updated_at`) VALUES
   (4 , 'android', '安卓描述', '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 
-INSERT INTO `r_cate_user` (`id`, `cate_id`, `user_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `r_follow_cate` (`id`, `cate_id`, `following_id`, `created_at`, `updated_at`) VALUES
   (NULL , 1, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,2, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
   (NULL , 3, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,1, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
 
 INSERT INTO `r_follow_user` (`id`, `followed_id`, `following_id`, `created_at`, `updated_at`) VALUES
+  (NULL ,100001, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,100002, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL ,100003, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,100000, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
+  (NULL ,100002, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
+
+INSERT INTO `read` (`id`, `article_id`, `user_id`, `created_at`, `updated_at`) VALUES
   (NULL ,100001, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,100002, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
   (NULL ,100003, 100000, '2016-08-20 10:10:13', '2016-08-20 10:10:20'), (NULL ,100000, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20'),
   (NULL ,100002, 100001, '2016-08-20 10:10:13', '2016-08-20 10:10:20');
