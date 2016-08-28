@@ -49,7 +49,7 @@ a, img, button {
 
 .github-icon {
     float: right;
-    position: absolute;
+    /*position: absolute;*/
     right: 320px;
     border-radius: 70%;
     background-color: #d3d6d8;
