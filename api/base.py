@@ -20,6 +20,9 @@ class ApiBase(RequestHandler):
             user = None
         raise Return(user)
 
+    def get_current_user_id(self):
+        return self.get_cookie('xitu_token')
+
     @coroutine
     def set_current_user(self, user_id):
         self.set_cookie('xitu_token', str(user_id))

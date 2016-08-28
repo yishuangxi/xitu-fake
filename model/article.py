@@ -35,8 +35,9 @@ class ModelArticle(ModelBase):
 
     @coroutine
     def create(self, title, link, desc, figure, _type, tag, cate_id, user_id):
-        sql = '''insert into article (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`, `cate_id`,`user_id`, `created_at`, `updated_at`)
-                                             values(null, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
+        sql = '''insert into article (`id`, `title`, `link`, `desc`, `figure`, `type`, `tag`,
+                                      `cate_id`,`user_id`, `created_at`, `updated_at`)
+                                      values (null, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
         now = self.now()
         article_id = yield self.insert(sql, title, link, desc, figure, _type, tag, cate_id, user_id, now, now)
 
