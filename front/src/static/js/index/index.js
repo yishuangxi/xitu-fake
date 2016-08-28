@@ -28,9 +28,7 @@ $(function () {
     });
 
 
-
-
-    $(document).on('mouseover', '[data-sel=action]', function(event){
+    $(document).on('mouseover', '[data-sel=action]', function (event) {
         console.log('mouseover')
         var $i = $('[data-sel=action]')
         var $iIndex = $i.index(this)
@@ -39,8 +37,7 @@ $(function () {
     })
 
 
-
-    $(document).on('mouseout', '[data-sel=action]', function(event){
+    $(document).on('mouseout', '[data-sel=action]', function (event) {
         console.log('mouseout')
         var $i = $('[data-sel=action]')
         var $iIndex = $i.index(this)
@@ -48,7 +45,6 @@ $(function () {
         $i.next().eq($iIndex).css("display", "none")
 
     })
-
 
 
     //
@@ -60,11 +56,32 @@ $(function () {
 
     $('.hd-Login').click(function () {     //点击登陆打开登陆弹框
         console.log(11100)
-        $('[login="user"]').css('display','block')
+        $('[login="user"]').css('display', 'block')
     })
 
 
 })();
+
+
+;(function ($) {
+    $(function () {
+
+        var url = '/api/cates'
+            $.ajax(url, {
+                method: 'GET',
+                success: function(response){
+                    console.log('data: ningfeijian ', response)
+
+
+                    var html = template('aside-nav', response)
+                    $('[data-sel=aside-nav]').append(html)
+
+                }
+            })
+
+
+    });
+})(jQuery);
 
 
 
