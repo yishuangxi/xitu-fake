@@ -8,21 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/publish/publish.css">
 </head>
 <body>
-<header class="gold-header">
-    <div class="container">
-        <ul class='float-left'>
-            <li><img class="gold-right-img" src='http://gold.xitu.io/images/logo-header.svg'></li>
-            </ul>
-        <div class="gold-hd-right float-right">
-            <div class="nav-img1 float-left"></div>
-            <div class="nav-img2 float-left"></div>
-            <div class="nav-img3 float-left"></div>
-
-            <div class="float-right"><img class="nav-action  dropdown" src="https://avatars.githubusercontent.com/u/20034728?v=3"></div>
-        </div>
-    </div>
-
-</header>
+@@include('component/header.html')
 <div id="main" class=" container-contribute">
     <div class="view">
         <nav class="bg">
@@ -96,7 +82,9 @@
 </div>
 
 <script type="text/javascript" src="/static/js/global/jquery.js"></script>
+<script type="text/javascript" src="/static/js/global/template.js"></script>
 <script type="text/javascript" src="/static/js/publish/publish.js" ></script>
+<script type="text/javascript" src="/static/js/component/header.js"></script>
 
 </body>
 </html>
