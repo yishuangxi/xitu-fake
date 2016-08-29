@@ -29,7 +29,7 @@ class ApiBase(RequestHandler):
 
     @coroutine
     def logout_current_user(self):
-        self.clear_cookie('user_id')
+        self.clear_cookie('xitu_token')
 
     def json_ok(self, data='', msg=''):
         callback = self.get_argument('callback', False)
