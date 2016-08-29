@@ -1,4 +1,4 @@
-.register-box{
+.ning-register-box{
     background-color: rgba(0, 0, 0, .6);
     z-index: 10002;
     position: fixed;
@@ -8,7 +8,7 @@
     bottom: 0;
     display: none;
 }
-.register-container{
+.ning-register-container{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -23,7 +23,7 @@
     padding: 1.5em;
     box-sizing: border-box;
 }
-.register-container span{
+.ning-register-container span{
     cursor: pointer;
     position: absolute;
     top: 0.4em;
@@ -31,14 +31,14 @@
     color: #909090;
     font-size: 1.1em;
 }
-.register-login-box{
+.ning-register-login-box{
 
 }
-.register-theme{
+.ning-register-theme{
     font-size: 1.3em;
     font-weight: 700;
 }
-.register-information{
+.ning-register-information{
     border: 1px solid #e8e8e8;
     border-radius: 1px;
     margin: 0.7em auto;
@@ -49,7 +49,7 @@
     display: block;
 
 }
-.already-existing{
+.ning-already-existing{
     padding: 0.7em;
     text-align: center;
     color: #007fff;
@@ -59,7 +59,7 @@
     font-size: 13px;
     outline: none;
 }
-.register-establish{
+.ning-register-establish{
     background-color: #007fff;
     border-radius: 2px;
     color: #fff;
@@ -68,7 +68,7 @@
     border: none;
     font-size: 16px;
 }
-.register-third-party{
+.ning-register-third-party{
     margin-top: 12px;
     text-align: center;
     font-size: 0.8em;
@@ -77,12 +77,12 @@
     display: block;
     color: #909090;
 }
-.register-third-party div{
+.ning-register-third-party div{
     line-height: 21px;
     font-size: 10px;float: left;
     margin-left: 25px;
 }
-.register-third-party img{
+.ning-register-third-party img{
     width: 21px;
     vertical-align: bottom;
 }
