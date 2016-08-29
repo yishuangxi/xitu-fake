@@ -15,7 +15,7 @@
 
 $('[data-sel=register]').click(function () {
 
-    $('[login="user"]').css("display","block")
+    $('[login=-index-register]').css("display","block")
     console.log('aaa')
 
 })
