@@ -56,7 +56,7 @@ $(function () {
 
     $('.hd-Login').click(function () {     //点击登陆打开登陆弹框
         console.log(11100)
-        $('[login="user"]').css('display', 'block')
+        $('[data-sel="login-modal"]').css('display', 'block')
     })
 
 
