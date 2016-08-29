@@ -29,4 +29,21 @@
 
     })
 
+
+    $('[data-sel="exit"]').click(function(){
+        $.post('/api/logout', {
+
+        }).done(function(data){
+            console.log(data)
+
+            if(data.code === 1){
+                window.location.href='http://localhost:8888'
+            }else if(data.code == 0){
+                alert("logout success")
+            }
+        })
+//
+
+    })
+
 })();
