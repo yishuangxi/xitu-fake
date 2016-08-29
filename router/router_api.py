@@ -5,6 +5,7 @@ router_api = [
     (r'/api/login', user.ApiLogin),
     (r'/api/logout', user.ApiLogout),
     (r'/api/register', user.ApiRegister),
+
     # get 获取user详情
     (r'/api/user/(\d+)', user.ApiUser),
     (r'/api/me', user.ApiMe),
