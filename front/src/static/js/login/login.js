@@ -13,17 +13,19 @@ $(function () {
             console.log(data)
             if(data.code === 1){
                 console.log('1'+data)
-                window.location.href='http://localhost:8888/user/10000'
+                window.location.href='/user/'+data.data.id
             }
         })
-//
-//            $.post('/api/login',
-//                    {
-//                        username: username,
-//                        password: password
-//                    }, function (data) {
-//                        console.log(data)
-//                    })
+
+           // $.post('/api/login',
+           //         {
+           //             username: username,
+           //             password: password
+           //         }, function (data) {
+           //             console.log(data)
+           //         })
+
+
 
 
     })
@@ -36,7 +38,8 @@ $(function () {
     })
 
    $('[login=shut-down]').click(function(){
-       $('[login="user"]').css('display','none')
+       console.log(123456)
+       $('[data-sel=login-modal]').css('display','none')
    })
 
 

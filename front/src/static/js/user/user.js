@@ -4,7 +4,9 @@
 
 
 ;(function(){
-    var url = '/api/user/100000'    //用ajax请求数据渲染用户主页
+    var userId = location.pathname.split("/")[2]
+    
+    var url = '/api/user/'+userId    //用ajax请求数据渲染用户主页
     $.ajax(url,{
         method:"GET",
         async:"true",
