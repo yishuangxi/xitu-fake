@@ -108,7 +108,7 @@
     border-radius: 4px;
     font-size: 16px;
     top: 64px;
-    /*display: none;*/
+    display: none;
 }
 
 .user-dropdown-list li {
@@ -126,7 +126,7 @@
 
 .user-dropdown-list2 {
     top: 140px;
-    right: 163px;
-    /*display: none;*/
+    right: 161px;
+    display: none;
 }
 

@@ -57,9 +57,8 @@ class ApiLogin(ApiUserBase):
 class ApiLogout(ApiUserBase):
     @coroutine
     def post(self):
-        user_id = self.get_cookie('user_id')
         self.logout_current_user()
-        self.json_ok(user_id)
+        self.json_ok()
 
 
 class ApiRegister(ApiUserBase):

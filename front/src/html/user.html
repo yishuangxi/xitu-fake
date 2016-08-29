@@ -7,55 +7,11 @@
     <link type="text/css" rel="stylesheet" href="../static/css/component/header.css">
     <link rel="stylesheet" type="text/css" href="../static/css/user/user.css">
 </head>
-<body>
-<header class="gold-header">
-    <div class="container">
-        <ul class='float-left'>
-            <li class="gold-right-img-box"><img class="gold-right-img" src='http://gold.xitu.io/images/logo-header.svg'>
-            </li>
-        </ul>
-        <div class="gold-hd-right float-right">
-            <div class="nav-img1 float-left"></div>
-            <div class="nav-img2 float-left"></div>
-            <div class="nav-img3 float-left"></div>
-
-            <div class="float-right"><img class="nav-action  dropdown" src="https://avatars.githubusercontent.com/u/20034728?v=3"></div>
-        </div>
-
-        <ul class="user-dropdown-list">
-            <div class="user-dropdown-list-box">
-                <li>我的主页</li>
-                <li>我的收藏</li>
-                <li>标签管理</li>
-            </div>
-            <div  class="user-dropdown-list-box">
-                <li>设置</li>
-                <li>关于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>
-                    <ul class="user-dropdown-list user-dropdown-list2">
-                        <div class="user-dropdown-list-box">
-                            <li>下载应用</li>
-                            <li>关于</li>
-                            <li>加入我们</li>
-                            <li>下载应用</li>
-                            <li>翻译计划</li>
-                            <li>合作伙伴</li>
-                        </div>
-                        </ul>
-                </li>
-
-            </div>
-            <div class="user-dropdown-list-box">
-                <li>登出</li>
-            </div>
-        </ul>
-
-    </div>
+<body data-sel="body">
+@@include('component/header.html')
 
 
-</header>
-
-
-<div class="user">
+<div class="user" >
     <div class="user-info-box">
         <div class="user-role">申请联合编辑</div>
         <!--<div>-->
@@ -92,6 +48,7 @@
 <script type="text/javascript" src="/static/js/global/jquery.js"></script>
 <script type="text/javascript" src="/static/js/global/template.js"></script>
 <script type="text/javascript" src="/static/js/user/user.js"></script>
+<script type="text/javascript" src="/static/js/component/header.js"></script>
 
 </body>
 </html>
