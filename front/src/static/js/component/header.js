@@ -29,4 +29,24 @@
 
     })
 
+
+    $('[data-sel="exit"]').click(function(){
+        $.post('/api/logout', {
+
+        }).done(function(data){
+            console.log(data)
+
+            if(data.code === 1){
+                window.location.href='http://localhost:8888'
+            }else if(data.code == 0){
+                alert("退出失败")
+            }
+        })
+
+    })
+
+    $('[data-sel="contribute"]').click(function(){
+       window.location.href='http://localhost:8888/publish'
+    })
+
 })();
