@@ -37,6 +37,7 @@
             console.log(data)
 
             if(data.code === 1){
+                alert("确定要退出吗？")
                 window.location.href='http://localhost:8888'
             }else if(data.code == 0){
                 alert("退出失败")

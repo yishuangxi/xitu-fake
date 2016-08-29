@@ -14,6 +14,8 @@ $(function () {
             if(data.code === 1){
                 console.log('1'+data)
                 window.location.href='http://localhost:8888/user/10000'
+            }else{
+                alert('您输入的用户名或密码错误，请重新输入!!')
             }
         })
 //

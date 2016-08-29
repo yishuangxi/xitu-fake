@@ -43,8 +43,9 @@ ul {
 
 .home-left-nav-box {
     margin-right: 1.5em;
-    width: 7em;
+    width: 15%;
     letter-spacing: .05em;
+    position: relative;
 }
 
 .title {
@@ -74,14 +75,16 @@ ul {
 .category:hover {
     color: #007fff;
 }
-.right-header-left{padding: 1em;position: relative;}
-.header-title{ display: inline-block;}
-.header-title:after {
+.home-right-box{background-color: white;width: 80%;}
+.right-header{color: #2b445d;padding: 0 8px;}
+.right-header-left{position: relative;}
+.header-title{ display: inline-block;padding: 1em;position: relative;}
+.header-title-l:after {
     content: '';
-
     left:100%;
     width: 1px;
     height: 16px;
     background-color: #2b445d;
     position: absolute;
 }
+.right-header-right{}
