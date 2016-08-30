@@ -1,0 +1,11 @@
+页面路由:
+1, 首页: /   index.html, index-login   (index.html是未登录, index-login.html 已登录)
+2, 个人主页: /user/100000   user.html   (其中,100000代表用户id)
+
+
+API路由:
+1, GET /api/articles?last_one=100000&count=10&cate_id=1
+   last_one: 上一页最后一条数据, 可选, 默认值为0;
+   count: 一页有多少条数据,可选,默认值为10;
+   cate_id: 分类id, 可以过滤出某个分类下的文章, 可选, 默认值为空
+
