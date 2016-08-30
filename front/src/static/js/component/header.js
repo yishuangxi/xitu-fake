@@ -51,7 +51,12 @@
     })
 
     $('[ data-sel="go-home"]').click(function(){   //点击我的主页跳转到个人主页页面
-        window.location.href='http://localhost:8888/me'
+        $.post('/api/logout',{
+        }).done(function(data){
+            console.log('1111'+data)
+            window.location.href='/user/'+location.pathname.split("/")[2]
+        })
+
     })
 
     $('[data-sel="go-homepage"]').click(function(){
