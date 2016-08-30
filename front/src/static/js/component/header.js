@@ -51,11 +51,10 @@
     })
 
     $('[ data-sel="go-home"]').click(function(){   //点击我的主页跳转到个人主页页面
-        $.post('/api/logout',{
-        }).done(function(data){
-            console.log('1111'+data)
-            window.location.href='/user/'+location.pathname.split("/")[2]
-        })
+
+
+            window.location.href='/user/100000'
+
 
     })
 
