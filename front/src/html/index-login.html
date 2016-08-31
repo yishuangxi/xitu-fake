@@ -39,17 +39,16 @@
             <div class="home-left-nav-box float-left">
                 <ul>
                     <li>
-                        <div class="title">首页</div>
-                        <ul class="category-list">
+                        <div class="title"  data-sel="index-title">首页</div>
+                        <ul class="category-list none" data-sel="index-nav" >
                             <li class="category">我关注的</li>
-                            <li class="category">前端</li>
-                            <li class="category">设计</li>
+
 
                         </ul>
                     </li>
                     <li>
-                        <div class="title">掘金专栏</div>
-                        <ul class="category-list">
+                        <div class="title" data-sel="index-title">掘金专栏</div>
+                        <ul class="category-list" >
                             <li class="category">全部</li>
                             <li class="category">Android</li>
                             <li class="category">前端</li>
@@ -62,7 +61,7 @@
                         </ul>
                     </li>
                     <li>
-                        <div class="title">发现</div>
+                        <div class="title" data-sel="index-title">发现</div>
                         <ul class="category-list">
                             <li class="category">全部</li>
                             <li class="category">Android</li>
@@ -124,8 +123,11 @@
         </div>
     </div>
 </div>
+@@include('template/index-login.html')
 <script type="text/javascript" src="/static/js/global/jquery.js"></script>
+<script type="text/javascript" src="/static/js/global/template.js"></script>
 <script type="text/javascript" src="/static/js/component/header.js"></script>
+<script type="text/javascript" src="/static/js/index-login/index-login.js"></script>
 
 
 </body>

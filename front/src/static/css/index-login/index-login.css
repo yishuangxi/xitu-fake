@@ -1,5 +1,7 @@
+body{background-color: #f8f9fa;}
 .scroll-padding {
     background-color: #f8f9fa;
+
 }
 
 .container {
@@ -177,3 +179,6 @@ ul {
 .meta-tag {
     display: inline-block;
 }
+.category-list{display:none}
+
+.none{display:block;}
