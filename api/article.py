@@ -53,7 +53,8 @@ class ApiArticles(ApiArticleBase):
 
 class ApiArticlesRead(ApiArticleBase):
     @coroutine
-    def get(self, user_id):
+    def get(self):
+        user_id = self.get_argument('user_id', None)
         page = self.get_argument('page', 1)
         data = yield self.srv_article.find_page_by_user_id(user_id, page)
         self.json_ok(data)
