@@ -1,4 +1,7 @@
-body{background-color: #f8f9fa;}
+body {
+    background-color: #f8f9fa;
+}
+
 .scroll-padding {
     background-color: #f8f9fa;
 
@@ -11,13 +14,15 @@ body{background-color: #f8f9fa;}
 .banner {
     position: relative;
 }
-.banner2{padding-top: 65px;}
+
+.banner2 {
+    padding-top: 65px;
+}
 
 .banner img {
     width: 100%;
     height: 144px;
     margin-top: 15px;
-
 
 }
 
@@ -39,6 +44,7 @@ ul {
     position: absolute;
     top: 85px;
     right: 10px;
+    cursor: pointer;
 }
 
 .home-entry-list {
@@ -90,6 +96,8 @@ ul {
     padding: 0 8px;
     border-bottom: 1px solid #f1f1f1;
 }
+.right-header span{cursor: pointer;transition: color,0.3s;}
+.right-header span:hover{color: #007fff;}
 
 .right-header-left {
     position: relative;
@@ -137,6 +145,8 @@ ul {
 
 .entry-date {
     display: inline-block;
+    font-size: 13px;
+    color: #bbbbbb;
 }
 
 .screenshot > img {
@@ -175,12 +185,29 @@ ul {
     padding: 0.1em 0.8em;
     border: 1px solid #f1f1f1;
     display: inline-block;
+    font-size: 13px;
+    color: #bbbbbb;
 
 }
 
 .meta-tag {
     display: inline-block;
 }
-.category-list{display:none}
 
-.none{display:block;}
+.category-list {
+    display: none
+}
+
+.none {
+    display: block;
+}
+
+.meta-tag {
+    margin: 0 0.25em;
+    padding: 0.2em 0.8em;
+    transition: all, 0.3s;
+    font-size: 13px;
+    color: #bbbbbb;
+    background-color:#f8f9fa;
+
+}

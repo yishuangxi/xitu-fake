@@ -24,10 +24,10 @@
             }
             $list.not('.none').css('display','none')
 
-            $list.filter('.none').fadeOut(function(){
+            $list.filter('.none').hide(function(){
                 $(this).removeClass('none')
             })
-            $list.eq($index).fadeIn(function(){
+            $list.eq($index).show(function(){
                 $(this).addClass('none')
             })
 
