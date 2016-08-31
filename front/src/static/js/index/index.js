@@ -71,8 +71,6 @@ $(function () {
                 method: 'GET',
                 success: function(response){
                     console.log('data: ningfeijian ', response)
-
-
                     var html = template('aside-nav', response)
                     $('[data-sel=aside-nav]').append(html)
 

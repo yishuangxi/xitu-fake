@@ -13,7 +13,13 @@ $(function () {
             console.log(data)
             if(data.code === 1){
                 console.log('1'+data)
+
                 window.location.href='/user/'+data.data.id
+            }else{
+                alert('您输入的用户名或密码错误，请重新输入!!')
+
+
+
             }
         })
 
