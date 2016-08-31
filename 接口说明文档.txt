@@ -36,7 +36,29 @@ API路由:
   GET /api/articles/read?user_id=100000
   user_id: 用户id
 
-  成功: {"msg": "", "code": 1, "data": [{"user_id": 100000, "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg", "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b501", "created_at": "2016-08-20 10:10:13", "updated_at": "2016-08-20 10:10:20", "tag": "\u6280\u672f", "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041", "cate_id": 1, "type": "1", "id": 100000, "desc": "\u6587\u7ae0\u63cf\u8ff01"}, {"user_id": 100000, "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg", "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b503", "created_at": "2016-08-20 10:10:13", "updated_at": "2016-08-20 10:10:20", "tag": "\u6280\u672f", "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041", "cate_id": 3, "type": "1", "id": 100002, "desc": "\u6587\u7ae0\u63cf\u8ff03"}]}
+  成功: {"msg": "", "code": 1, "data": [{"user_id": 100000,
+   "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg",
+   "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b501",
+   "created_at": "2016-08-20 10:10:13",
+   "updated_at": "2016-08-20 10:10:20",
+   "tag": "\u6280\u672f",
+   "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041",
+   "cate_id": 1,
+   "type": "1",
+   "id": 100000,
+   "desc": "\u6587\u7ae0\u63cf\u8ff01"},
+
+   {"user_id": 100000,
+   "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg",
+   "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b503",
+   "created_at": "2016-08-20 10:10:13",
+   "updated_at": "2016-08-20 10:10:20",
+   "tag": "\u6280\u672f",
+   "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041",
+   "cate_id": 3,
+   "type": "1",
+   "id": 100002,
+   "desc": "\u6587\u7ae0\u63cf\u8ff03"}]}
   失败: 略
 
 

@@ -1,17 +1,4 @@
-// ;(function () {
-//     var $register =$('[data-sel=register]')
-//
-//     $register.click(function () {
-//
-//         // console.log($register)
-//         var $registerIndex=$register.index(this)
-//         console.log($registerIndex)
-//         $(['[login="user"]']).eq($registerIndex).css("display","block")
-//     })
-// })();
 
-//
-//
 ;(function(){
     $('[data-sel=hd-register]').click(function () {
 
@@ -44,20 +31,17 @@
 
         }).done(function (data) {
             console.log('data ================== ', data)
-        })
+            if(data.code === 1){
+                alert("注册成功！请登录")
+                $('[data-sel=i-want-register]').css("display","none")
+            }
+            // else {
+            //     alert("帐号存在或密码错误，请重新输入")
+            // }
 
-        // function post(url,params) {
-        //     var temp=$post('/api/register')
-        //     temp.username =username
-        //     temp.password = password
-        //     temp.mall = mall
-        //     console.log(temp)
-        //
-        //     for(var x in params){
-        //         temp.appendChild(temp)
-        //
-        //     }
-        // }
+
+
+        })
 
 
 

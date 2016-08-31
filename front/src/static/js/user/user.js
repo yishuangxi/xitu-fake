@@ -5,8 +5,10 @@
 
 ;(function(){
     var userId = location.pathname.split("/")[2]
-    
-    var url = '/api/user/'+userId    //用ajax请求数据渲染用户主页
+
+
+    //用ajax请求数据渲染用户主页
+    var url = '/api/user/'+userId
     $.ajax(url,{
         method:"GET",
         async:"true",
@@ -23,10 +25,5 @@
 
         }
     })
-
-
-
-
-
 
 })();
