@@ -1,0 +1,88 @@
+页面路由:
+1, 首页: /   index.html, index-login   (index.html是未登录, index-login.html 已登录)
+2, 个人主页: /user/100000   user.html   (其中,100000代表用户id)
+
+
+API路由:
+说明:
+  1, 所有失败提示均为: {"msg": "失败提示", "code": 0}
+  2, 所有接口除非明确说明,否则不需要授权
+
+一、文章相关API
+
+1, 获取文章列表:
+  GET /api/articles?last_one=100000&count=10&cate_id=1
+  last_one: 上一页最后一条数据, 可选, 默认值为0;
+  count: 一页有多少条数据,可选,默认值为10;
+  cate_id: 分类id, 可以过滤出某个分类下的文章, 可选, 默认值为空
+
+  成功: {"msg": "", "code": 1, "data": [{"user_id": 100000, "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg", "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b503", "created_at": "2016-08-20 10:10:13", "updated_at": "2016-08-20 10:10:20", "tag": "\u6280\u672f", "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041", "cate_id": 3, "type": "1", "id": 100002, "desc": "\u6587\u7ae0\u63cf\u8ff03"}, {"user_id": 100003, "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg", "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b504", "created_at": "2016-08-20 10:10:13", "updated_at": "2016-08-20 10:10:20", "tag": "\u6280\u672f", "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041", "cate_id": 3, "type": "1", "id": 100003, "desc": "\u6587\u7ae0\u63cf\u8ff04"}]}
+  失败: {"msg": "失败提示", "code": 0}
+
+2, 新增文章:
+  POST /api/article  需要登录
+  title: 文章标题, 非空必填
+  link: 文章链接, 非空必填
+  desc: 文章描述, 可选可空
+  figure: 文章图片, 可选可空
+  type: 文章类型, 非空必填
+  tag: 文章标签, 可选可空
+  cate_id: 分类id, 非空必填
+
+  成功: {"code": 1, "msg": "", "data": "新增文章id, 整数"}
+  失败: {"msg": "失败提示", "code": 0}
+
+3, 获取指定用户的阅读文章列表:
+  GET /api/articles/read?user_id=100000
+  user_id: 用户id
+
+  成功: {"msg": "", "code": 1, "data": [{"user_id": 100000, "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg", "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b501", "created_at": "2016-08-20 10:10:13", "updated_at": "2016-08-20 10:10:20", "tag": "\u6280\u672f", "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041", "cate_id": 1, "type": "1", "id": 100000, "desc": "\u6587\u7ae0\u63cf\u8ff01"}, {"user_id": 100000, "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg", "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b503", "created_at": "2016-08-20 10:10:13", "updated_at": "2016-08-20 10:10:20", "tag": "\u6280\u672f", "link": "http://gold.xitu.io/post/57ab4bd32e958a0066cf7041", "cate_id": 3, "type": "1", "id": 100002, "desc": "\u6587\u7ae0\u63cf\u8ff03"}]}
+  失败: 略
+
+
+二、分类相关API:
+
+1, 获取所有分类列表:
+  GET /api/cates
+  成功: {"msg": "", "code": 1, "data": [{"id": 1, "created_at": "2016-08-20 10:10:10", "updated_at": "2016-08-20 10:10:20", "name": "\u524d\u7aef", "desc": "\u524d\u7aef\u63cf\u8ff0"}, {"id": 2, "created_at": "2016-08-20 10:10:11", "updated_at": "2016-08-20 10:10:20", "name": "\u8bbe\u8ba1", "desc": "\u8bbe\u8ba1\u63cf\u8ff0"}, {"id": 3, "created_at": "2016-08-20 10:10:12", "updated_at": "2016-08-20 10:10:20", "name": "\u540e\u7aef", "desc": "\u540e\u7aef\u63cf\u8ff0"}, {"id": 4, "created_at": "2016-08-20 10:10:13", "updated_at": "2016-08-20 10:10:20", "name": "android", "desc": "\u5b89\u5353\u63cf\u8ff0"}]}
+  失败: 略
+
+2, 获取指定用户关注分类列表:
+  GET /api/cates?user_id=100000&page=1
+  user_id: 用户id
+  page: 页码
+
+  成功:
+  失败:略
+
+三、用户相关API:
+1, 注册:
+  POST /api/register
+  username: 用户名,必填非空
+  password: 密码,必填非空
+
+  成功: {"code": 1, "msg": "msg", "data": ""}
+  失败: 略
+
+2, 登录:
+  POST /api/login
+  username: 用户名,必填非空
+  password: 密码, 必填非空
+
+  成功: {"msg": "", "code": 1, "data": {"username": "aaa", "created_at": "2016-08-20 10:10:10", "enabled": "1", "updated_at": "2016-08-20 10:10:20", "password": "111", "id": 100000}}
+  失败: 略
+
+3, 退出登录
+  POST /api/logout
+
+  成功: {"msg": "", "code": 1, "data": ""}
+  失败: 略
+
+4, 获取用户详情:
+  GET /api/user/100000
+  100000: 用户id,
+
+  成功: {"msg": "", "code": 1, "data": {"username": "aaa", "created_at": "2016-08-20 10:10:10", "enabled": "1", "updated_at": "2016-08-20 10:10:20", "password": "111", "id": 100000}}
+  失败: 略
+
+
