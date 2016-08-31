@@ -37,6 +37,7 @@
             console.log(data)
 
             if(data.code === 1){
+                alert("确定要退出吗？")
                 window.location.href='http://localhost:8888'
             }else if(data.code == 0){
                 alert("退出失败")
@@ -50,7 +51,11 @@
     })
 
     $('[ data-sel="go-home"]').click(function(){   //点击我的主页跳转到个人主页页面
-        window.location.href='http://localhost:8888/me'
+
+
+            window.location.href='/user/100000'
+
+
     })
 
     $('[data-sel="go-homepage"]').click(function(){
