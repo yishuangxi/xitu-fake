@@ -32,7 +32,7 @@
     $('[data-sel=ok]').click(function(){
         var username = $('[data-sel=register-call]').val()
         var password = $('[data-sel=register-password]').val()
-        var email =$('[data-sel=register-mail]').val()
+        // var mail =$('[data-sel=register-mail]').val()
 
         console.log(username)
         console.log(password)

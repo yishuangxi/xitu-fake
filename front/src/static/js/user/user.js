@@ -1,8 +1,6 @@
 /**
  * Created by db on 16/8/21.
  */
-
-
 ;(function(){
     var userId = location.pathname.split("/")[2]
     
@@ -23,10 +21,5 @@
 
         }
     })
-
-
-
-
-
 
 })();
