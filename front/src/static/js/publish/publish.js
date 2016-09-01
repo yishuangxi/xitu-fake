@@ -55,8 +55,8 @@
         var cate_id=$('.c-tag-style-id').attr('data-cateid')
 
 
+
         console.log(title)
-        console.log(website)
         console.log(describe)
         console.log(type)
         console.log(tag)
@@ -67,7 +67,8 @@
             link:website,
             desc:describe,
             tag:tag,
-            type:type
+            type:type,
+            cate_id:cate_id
 
 
         })
