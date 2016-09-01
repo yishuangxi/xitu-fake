@@ -1,9 +1,9 @@
 from base import PageBase
+from tornado.gen import coroutine
 
 
 class PageIndex(PageBase):
+    @coroutine
     def get(self, *args, **kwargs):
-        if self.get_cookie('xitu_token'):
-            self.render('index-login.html')
-        else:
-            self.render('index.html')
+        user = yield self.get_current_user()
+        self.render('index.html', user=user)
