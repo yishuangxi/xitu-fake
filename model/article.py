@@ -12,6 +12,7 @@ class ModelArticle(ModelBase):
 
     @coroutine
     def find_page_by_cate(self, cate_id=None, article_id=0, count=10):
+        print 'count: ' + str(count) + ' count type: ' + str(type(count))
         if cate_id:
             sql = '''select * from article where id > %s and cate_id=%s limit %s'''
             data = yield self.query(sql, article_id, cate_id, count)

@@ -1,6 +1,6 @@
 # coding=utf8
 from base import PageBase
-
+from tornado.gen import coroutine
 
 class PageLogin(PageBase):
     def get(self):
@@ -12,9 +12,13 @@ class PageRegister(PageBase):
         self.render('register.html')
 
 class PageUser(PageBase):
+    @coroutine
     def get(self, user_id):
-        self.render('user.html')
+        user = yield self.get_current_user()
+        self.render('user.html', user=user)
 
 class PageMe(PageBase):
+    @coroutine
     def get(self):
-        self.render('user.html')
+        user = yield self.get_current_user()
+        self.render('user.html', user=user)

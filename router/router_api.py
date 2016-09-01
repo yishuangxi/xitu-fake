@@ -23,7 +23,7 @@ router_api = [
     # get 获取列表
     (r'/api/articles', article.ApiArticles),
     #get 获取阅读列表
-    (r'/api/articles/read/(\d+)', article.ApiArticlesRead),
+    (r'/api/articles/read', article.ApiArticlesRead),
 
     # 获取
     (r'/api/cate/(\d+)', cate.ApiCate),

@@ -1,15 +1,15 @@
 
-;(function(){
+
+
+;(function () {
     $('[data-sel=hd-register]').click(function () {
 
         $('[data-sel=i-want-register]').css("display","block")
         console.log('注册窗口打开了')
 
     })
-})();
 
 
-;(function () {
     $('[data-sel=register-Off]').click(function () {
 
         $('[data-sel=i-want-register]').css("display","none")
