@@ -8,7 +8,7 @@
 
 
     //用ajax请求数据渲染用户主页
-    var url = '/api/user/'+userId
+    var url = '/api/articles/read?user_id=100000'
     $.ajax(url,{
         method:"GET",
         async:"true",
