@@ -36,7 +36,8 @@ API路由:
   GET /api/articles/read?user_id=100000
   user_id: 用户id
 
-  成功: {"msg": "", "code": 1, "data": [{"user_id": 100000,
+  成功: {"msg": "", "code": 1, "data": [
+  {"user_id": 100000,
    "figure": "http://ac-mhke0kuv.clouddn.com/5371f4d4420cec838475.jpg?imageView/2/w/800/h/600/q/80/format/jpeg",
    "title": "\u6280\u672f\u6b63\u5b97\u4e0e\u91ce\u8def\u5b501",
    "created_at": "2016-08-20 10:10:13",

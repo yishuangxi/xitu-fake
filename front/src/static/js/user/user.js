@@ -6,13 +6,12 @@
 
 
     //用ajax请求数据渲染用户主页
-    var url = '/api/articles/read?user_id=100000'
+    var url = '/api/user/' + userId
     $.ajax(url,{
         method:"GET",
         async:"true",
         success:function(data){
-            console.log( data)
-
+            // console.log( data)
 
             var html = template('user-name', data)
 
@@ -23,5 +22,29 @@
 
         }
     })
+
+})();
+
+
+
+;(function () {
+
+    var url='/api/articles/read?user_id=100000'
+
+    $.ajax(url,{
+        method:"GET",
+        async:"true",
+        success:function (data) {
+            console.log(data)
+
+            var html=template('user-article',data)
+
+            $('.entries-box').after(html)
+        }
+    })
+
+
+
+
 
 })();
