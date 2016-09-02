@@ -6,7 +6,6 @@
   var $click =$('.click')
     $click.focus(function(){
         var $clickIndex = $click.index(this)
-        console.log($clickIndex)
         $click.eq($clickIndex).addClass('click-blue')
     })
     $click.blur(function(){
@@ -35,10 +34,6 @@
         $create.eq($createIndex).addClass('c-tag-style-id').siblings().removeClass('c-tag-style-id')
     })
 
-
-
-
-
 })();
 
 
@@ -56,6 +51,7 @@
 
 
 
+        console.log(website)
         console.log(title)
         console.log(describe)
         console.log(type)
@@ -70,6 +66,9 @@
             type:type,
             cate_id:cate_id
 
+
+        }).done(function (data) {
+            console.log("data===",data)
 
         })
     })

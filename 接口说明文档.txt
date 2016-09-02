@@ -27,7 +27,7 @@ API路由:
   figure: 文章图片, 可选可空
   type: 文章类型, 非空必填
   tag: 文章标签, 可选可空
-  cate_id: 分类id, 非空必填
+  cate_id: 分类id, 非空必填x
 
   成功: {"code": 1, "msg": "", "data": "新增文章id, 整数"}
   失败: {"msg": "失败提示", "code": 0}
