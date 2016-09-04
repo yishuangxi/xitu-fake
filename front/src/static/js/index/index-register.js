@@ -1,28 +1,15 @@
-// ;(function () {
-//     var $register =$('[data-sel=register]')
-//
-//     $register.click(function () {
-//
-//         // console.log($register)
-//         var $registerIndex=$register.index(this)
-//         console.log($registerIndex)
-//         $(['[login="user"]']).eq($registerIndex).css("display","block")
-//     })
-// })();
 
-//
-//
-;(function(){
+
+
+;(function () {
     $('[data-sel=hd-register]').click(function () {
 
         $('[data-sel=i-want-register]').css("display","block")
         console.log('注册窗口打开了')
 
     })
-})();
 
 
-;(function () {
     $('[data-sel=register-Off]').click(function () {
 
         $('[data-sel=i-want-register]').css("display","none")
@@ -32,7 +19,7 @@
     $('[data-sel=ok]').click(function(){
         var username = $('[data-sel=register-call]').val()
         var password = $('[data-sel=register-password]').val()
-        var email =$('[data-sel=register-mail]').val()
+        // var mail =$('[data-sel=register-mail]').val()
 
         if($('[data-sel=ok]').hasClass('registing')){
             return
@@ -50,20 +37,17 @@
 
         }).done(function (data) {
             console.log('data ================== ', data)
-        })
+            if(data.code === 1){
+                alert("注册成功！请登录")
+                $('[data-sel=i-want-register]').css("display","none")
+            }
+            // else {
+            //     alert("帐号存在或密码错误，请重新输入")
+            // }
 
-        // function post(url,params) {
-        //     var temp=$post('/api/register')
-        //     temp.username =username
-        //     temp.password = password
-        //     temp.mall = mall
-        //     console.log(temp)
-        //
-        //     for(var x in params){
-        //         temp.appendChild(temp)
-        //
-        //     }
-        // }
+
+
+        })
 
 
 

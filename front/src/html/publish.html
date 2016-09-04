@@ -28,29 +28,31 @@
                 <div class="flex clearfix">
                     <div class="flex-left float-left">
 
-                        <input class="flext-input click" type="url" required="required" placeholder="分享网址 https://gold.xitu.io/example">
-                        <input class="flext-input click" placeholder="标题"  required="required" type="text">
-                        <textarea class="click" placeholder="描述"  required="required"></textarea>
+                        <input class="flext-input click" data-sel="share-website" type="url" required="required" placeholder="分享网址 https://gold.xitu.io/example">
+                        <input class="flext-input click" data-sel="share-title" placeholder="标题"  required="required" type="text">
+                        <textarea class="click" data-sel="share-describe" placeholder="描述"  required="required"></textarea>
 
                         <p>
                             <label>分类</label>
                             <span class="c-tags">
                                 <span class="c-tag" data-cateid="1">Android</span>
                                 <span class="c-tag" data-cateid="2">前端</span>
+
                                 <span class="c-tag" data-cateid="3">iOS</span>
                                 <span class="c-tag" data-cateid="4">后端</span>
                                 <span class="c-tag" data-cateid="5">设计</span>
                                 <span class="c-tag" data-cateid="6">产品</span>
                                 <!--<span class="c-tag">工具资源</span>-->
                                 <!--<span class="c-tag">阅读</span>-->
+
                             </span>
                         </p>
                         <p>
                             <label>标签</label>
-                            <input class="input-optional click" placeholder="可选填" type="text">
+                            <input data-sel="share-tag" class="input-optional click" placeholder="可选填" type="text">
                         </p>
                         <article class="submit">
-                            <input type="submit" class="contribute-submit" value="投稿">
+                            <input type="submit" data-sel="submission" class="contribute-submit" value="投稿">
                         </article>
                     </div>
                     <div class="flex-right float-right">
@@ -67,9 +69,9 @@
                         <p>
                             <label>其他</label>
                             <span class="c-tags">
-                                <span class="c-tag">原创</span>
-                                <span class="c-tag">墙外</span>
-                                <span class="c-tag">英文</span>
+                                <span class="c-tag-id" data-cateid="1">原创</span>
+                                <span class="c-tag-id" data-cateid="2">墙外</span>
+                                <span class="c-tag-id" data-cateid="3">英文</span>
                             </span>
                         </p>
 

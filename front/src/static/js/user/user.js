@@ -1,12 +1,12 @@
 /**
  * Created by db on 16/8/21.
  */
-
-
 ;(function(){
     var userId = location.pathname.split("/")[2]
-    
-    var url = '/api/user/'+userId    //用ajax请求数据渲染用户主页
+
+
+    //用ajax请求数据渲染用户主页
+    var url = '/api/articles/read?user_id=100000'
     $.ajax(url,{
         method:"GET",
         async:"true",
@@ -23,10 +23,5 @@
 
         }
     })
-
-
-
-
-
 
 })();
