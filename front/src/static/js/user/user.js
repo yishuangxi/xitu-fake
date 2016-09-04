@@ -12,11 +12,8 @@
         async:"true",
         success:function(data){
             // console.log( data)
-
             var html = template('user-name', data)
-
             $('.user-role').after(html)
-
         },
         error:function(){
 
@@ -29,7 +26,9 @@
 
 ;(function () {
 
-    var url='/api/articles/read?user_id=100000'
+
+
+    var url='/api/articles/read/
 
     $.ajax(url,{
         method:"GET",

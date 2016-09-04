@@ -13,11 +13,9 @@
       $click.eq($clickIndex).removeClass('click-blue')
     })
 
-
 })();
 
 ;(function(){
-
 
     var $cTag = $('.c-tag')
     var $cTagIndex
@@ -48,7 +46,6 @@
         var type = $('.c-tag-style').attr('data-cateid')
         var tag =$('[data-sel=share-tag]').val()
         var cate_id=$('.c-tag-style-id').attr('data-cateid')
-
 
 
         console.log(website)

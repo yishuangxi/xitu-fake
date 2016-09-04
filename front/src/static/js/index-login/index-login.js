@@ -16,7 +16,9 @@
 
 
         $('[ data-sel="index-title"]').click(function(){
+
             var $index = $('[ data-sel="index-title"]').index(this)
+
             console.log($index)
 
             $('.category-list').eq($index).addClass('none')

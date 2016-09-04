@@ -70,7 +70,7 @@ $(function () {
             $.ajax(url, {
                 method: 'GET',
                 success: function(response){
-                    console.log('data: ningfeijian ', response)
+                    console.log('data:', response)
 
 
                     var html = template('aside-nav', response)
