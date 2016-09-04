@@ -4,7 +4,7 @@ body, div, a, span, img, button, ul, li {
     border: 0;
 }
 
-a, img, button {
+a,  button {
     display: block;
 }
 
@@ -27,6 +27,7 @@ a, img, button {
     margin: auto;
     padding: 20px 0 20px 0;
     border-radius: 50%;
+    display: block;
 }
 
 .user-name-name {
@@ -53,6 +54,7 @@ a, img, button {
     right: 320px;
     border-radius: 70%;
     background-color: #d3d6d8;
+
 }
 
 .user-action-btn {

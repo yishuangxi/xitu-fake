@@ -21,6 +21,12 @@
         var password = $('[data-sel=register-password]').val()
         // var mail =$('[data-sel=register-mail]').val()
 
+        if($('[data-sel=ok]').hasClass('registing')){
+            return
+        }
+
+        $('[data-sel=ok]').addClass('registing')
+
         console.log(username)
         console.log(password)
         // console.log(mall)
