@@ -21,6 +21,7 @@ gulp.task('css', function(){
     gulp.src('src/static/css/**/*.css')
         .pipe(gulp.dest('dist/static/css'))
 })
+
 gulp.task('js',function(){
     gulp.src('src/static/js/**/*.js')
         .pipe(gulp.dest('dist/static/js'))
