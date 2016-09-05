@@ -6,4 +6,4 @@ class PageIndex(PageBase):
     @coroutine
     def get(self, *args, **kwargs):
         user = yield self.get_current_user()
-        self.render('index.html', user=user)
+        self.render('index/index.html', user=user)
