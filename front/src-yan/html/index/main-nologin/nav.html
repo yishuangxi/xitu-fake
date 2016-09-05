@@ -1,3 +1,26 @@
-<div class ='nav-left' data-sel="aside-nav">
+
     <!--引用template-->
-</div>
+
+
+
+<script type="text/html" id="aside-nav">
+    <div class ='nav-left' >
+    <ul class="nav-list">
+        <@for (var i = 0; i < data.length; i++){@>
+        <@var item = data[i]@>
+        <li>
+            <svg></svg>
+            <a href=""><span class="nav-text"><@=item.name@></span></a>
+        </li>
+        <@}@>
+
+    </ul>
+    <a class="nav-a ">
+        <img class="app-img" src="http://gold.xitu.io/images/welcome/app@2x.png">
+    </a>
+    <a class="nav-a">
+        <img class="rss-img" src="http://gold.xitu.io/images/welcome/rss.svg">
+    </a>
+
+    </div>
+</script>
