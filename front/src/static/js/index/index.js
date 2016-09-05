@@ -63,27 +63,3 @@ $(function () {
 })();
 
 
-;(function ($) {
-    $(function () {
-
-        var url = '/api/cates'
-            $.ajax(url, {
-                method: 'GET',
-                success: function(response){
-                    console.log('data:', response)
-
-
-                    var html = template('aside-nav', response)
-                    $('[data-sel=aside-nav]').append(html)
-
-
-                }
-
-            })
-
-
-    });
-})(jQuery);
-
-
-
