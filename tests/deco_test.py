@@ -1,17 +1,19 @@
 from functools import wraps
 
-def login(fn):
-    @wraps(fn)
-    def _():
-        print 'before fn ...'
-        fn()
-        print 'after fn ...'
 
-    return _
+def login(fn):
+  @wraps(fn)
+  def _():
+    print 'before fn ...'
+    fn()
+    print 'after fn ...'
+
+  return _
+
 
 @login
 def fn():
-    print 'fn ...'
+  print 'fn ...'
 
 
 fn()
