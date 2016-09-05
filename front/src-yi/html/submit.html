@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {%include "global/meta.html"%}
+    <!-- 引入公共的css样式-->
+    {%include "global/css.html"%}
+    <title></title>
+</head>
+<body>
+<!--引入头部（已做登陆前登陆后判断）-->
+{% include "global/header.html"%}
+<!--引入投稿而面主要部分-->
+{% include "submit/main.html"%}
+
+<!--公共js-->
+{%include "global/header.js"%}
+
+
+<!--当前页面js-->
+{%include "static/submit/main/js.html"%}
+
+
+
+
+</body>
+</html>

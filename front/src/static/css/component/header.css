@@ -8,6 +8,7 @@
     color: #909090;
     border-bottom: 1px solid #f1f1f1;
 }
+.container{width: 960px;}
 
 .nav-action {
     margin: auto 0.8em;
