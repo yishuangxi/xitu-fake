@@ -1,0 +1,19 @@
+<script type="text/html" id="left-nav">
+    <div class="left-nav">
+        <ul class="nav-list">
+            <@for(var i = 0; i < data.length; i++) { @>
+            <@ var item = data[i]@>
+            <li>
+                <svg class="icon"></svg>
+                <a href="#"><span class="nav-text"><@=item.name@></span></a>
+            </li>
+            <@}@>
+        </ul>
+        <a href="http://gold.xitu.io/app" target="_blank">
+            <img src="http://gold.xitu.io/images/welcome/app@2x.png" class="app-img">
+        </a>
+        <a href="http://gold.xitu.io/rss" target="_blank">
+            <img src="http://gold.xitu.io/images/welcome/rss.svg" class="rss-img">
+        </a>
+    </div>
+</script>
