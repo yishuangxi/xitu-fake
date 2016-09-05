@@ -1,0 +1,165 @@
+
+/*<!--头-->*/
+.head{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+.head-box{
+    width: 1000px;
+    margin: auto;
+    height: 64px;
+}
+.head-box img{
+    height: 32px;
+    padding: 16px 12px 16px 12px;
+}
+.head-community{
+    letter-spacing: .2em;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 23px 12px 23px 12px;
+    margin-left: 36px;
+}
+.head-signin{
+    padding: 22px 12px 22px 12px;
+}
+.head-signin div{
+    height: 19px;
+}
+.head-signin-div{
+    padding-left: 7px;
+    line-height: 19px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.head-signin-div:hover{
+    color: #0371df;
+}
+
+
+
+/*主体的开始*/
+.head-subject{
+    margin-top: 64px;
+    width: 100%;
+    position: absolute;
+}
+.head-signin-box{
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+}/*容器*/
+
+/*左边导航*/
+.head-navigation{
+    margin-bottom: 5px;
+    padding: 7px 10px 7px 10px;
+    margin: auto;
+    color: #909090;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+.head-navigation:hover{
+    color: #007fff;
+    background-color: hsla(0,0%,87%,.2);
+}
+.head-navigation-2{
+    margin-top: 16px;
+}
+.header-dov-img{
+
+    width: 120px;
+}
+.header-dov-img img{
+    margin: 16px 25px 8px 25px;
+    width: 89px;
+}
+
+
+
+/*中间主体部分*/
+.head-content{
+    width: 600px;
+    background-color:white;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+.head-selected{
+    width: 560px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 42px;
+    padding: 0 20px 0 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.head-content-box{
+    padding: 22px;
+}
+.content-box{
+    width: 100%;
+    margin-bottom: 3px;
+    height: 69px;
+    display: block;
+}
+.content-box:hover .content-explain-overflow{
+    display: block;
+}
+.content-box:hover .content-explain-title{
+    color: #007fff;
+}
+.content-box-img{
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+}
+.content-box-explain{
+    width: 85%;
+    padding: 8px 0 8px 23px;
+}
+.content-explain-title{
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+}
+.content-explain-gaze{
+    font-size: 14px;
+    line-height: 18px;
+    color: #909090;
+}
+.content-explain-gaze div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.content-explain-special{
+    width: 18px;
+    height: 18px;
+    background-color: #37c700;
+}
+.content-explain-overflow{
+    height: 2px;
+    width: 2px;
+    background-color: #909090;
+    margin: 9px 2px 0 2px;
+    display: none;
+}
+.content-box-resources{
+    border: 1px solid #909090;
+    position: absolute;
+    background-color: white;
+    display: none;
+}
+.content-box-resources div{
+    padding: 6px 12px;
+}
+.content-box-resources div:hover{
+    background-color: #f1f1f1;
+}
+.content-resources-box:hover .content-box-resources{
+    display: block;
+}
+
