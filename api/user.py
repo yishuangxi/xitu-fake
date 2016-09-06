@@ -57,7 +57,7 @@ class ApiLogin(ApiUserBase):
 
 class ApiLogout(ApiUserBase):
   @coroutine
-  def post(self):
+  def get(self):
     self.logout_current_user()
     self.json_ok()
 
