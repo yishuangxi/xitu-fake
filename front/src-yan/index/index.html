@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {%include "../global/html/meta.html"%}
+    <!-- 公共样式-->
+    {%include "lead-in/css-global.html"%}
+    <!-- 公共头部样式-->
+    {%include "lead-in/header-html.html"%}
+    <!-- -->
+    {%if user %}
+    {%include "lead-in/css-main-login.html"%}
+    {%else%}
+    {%include "lead-in/css-main-nologin.html"%}
+    {%end%}
+
+
+</head>
+<body>
+<!--头部html-->
+{%include "../global/lead-in/header.html"%}
+
+<!--主体部分判断-->
+{%if user %}
+{%include "html/main-login.html"%}
+{%else%}
+{%include "html/main-nologin.html"%}
+{%end%}
+
+
+<!--主体部分的左边导航-->
+{%include "../global/lead-in/js.html"%}
+<!--js与模版文件的引入-->
+{%include "lead-in/js.html"%}
+
+</body>
+</html>

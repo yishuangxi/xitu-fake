@@ -62,12 +62,12 @@
 var gulp = require('gulp')
 
 gulp.task('yan-html', function(){
-    return gulp.src('./src-yan/html/**/*.html')
+    return gulp.src('./src-yan/**/*')
         .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('yan-watch', function(){
-    gulp.watch(['./src-yan/html/**/*.html'], ['yan-html'])
+    gulp.watch(['./src-yan/**/*'], ['yan-html'])
 })
 
 gulp.task('yan-build', ['yan-watch', 'yan-html'])
