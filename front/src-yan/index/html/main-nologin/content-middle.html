@@ -1,21 +1,25 @@
 
 
     <!--－－－－－－－内容 （精选） 内容 开始－－－－－－－-->
-    <div class="box-entries">
+    <script type="text/html" id="content-nologin">
+
+
+        <@for (var i = 0; i < data.length; i++) {@>
+        <@ var item = data[i] @>
         <div class="entry clearfix">
             <div class="entry-screenshot float-left">
-                <img src="http://ac-mhke0kuv.clouddn.com/cad22d4a0c25c5361f08.jpg?imageView/1/w/120/h/120/q/100/format/png">
+                <img src="<@= item.figure@>">
             </div>
             <div class="float-left entry-info">
-                <div class="entries-title">Android 优秀文章收集整理集合</div>
+                <div class="entries-title"><@= item.title @></div>
                 <div class="entries-meta">
                     <div class="collection-action action">
                         <i>^_^</i>
-                        <span>719</span>
+                        <span>780</span>
                     </div>
-                    <div class="action">宇行信</div>
+                    <div class="action">用户xxx<@= item.user_id @>bbb</div>
                     <div class="action"> ·</div>
-                    <div class="action">3天前</div>
+                    <div class="action">3天</div>
                     <i class="action" data-sel="action">...</i>
                     <ul class="dropdown-list">
                         <li>
@@ -48,8 +52,9 @@
                 </div>
             </div>
         </div>
+        <@}@>
     </div>
 
-
+    </script>
 
 

@@ -1,0 +1,246 @@
+.aside-right {
+    width: 14.4em;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 0 0 1em;
+
+}
+
+.section-content-top {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.login-section-text {
+    font-size: 0.9em;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+    color: #333;
+    font-weight: 700;
+
+}
+
+.button {
+    margin-bottom: 0.5em;
+    border-radius: 3px;
+    box-shadow: inset 0 -0.2em 0 0 rgba(0, 0, 0, .05);
+    font-size: 0.8em;
+    text-align: left;
+    padding: 0.8em 0.8em 0.8em 2em;
+    color: #fff;
+    cursor:pointer;
+}
+
+.weibo-button {
+    margin-left: 0;
+    background-color: #d21a1a;
+}
+
+.login-icon-img {
+    height: 1.5em;
+    vertical-align: bottom;
+    margin-left: 0.5em;
+}
+
+.button span {
+    margin-left: 0.5em;
+    line-height: 19px;
+}
+.button:hover{opacity: 0.8;}
+
+.weixin-button {
+    background-color: #37c700;
+
+}
+
+.github-button {
+    background-color: #4c4c4c;
+}
+
+.email-phone-button {
+    margin-left: 0;
+    background-color: transparent;
+    border: 1px solid #eaeaea;
+    color: #007fff;
+    text-align: center;
+}
+
+.company-text {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin-top: 1.6em;
+    margin-bottom: 0;
+    color: hsla(0, 0%, 40%, .5);
+    text-align: center;
+}
+
+.company-img {
+    width: 10.6em;
+    display: block;
+    margin: auto;
+}
+
+.tags-section {
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 2px;
+}
+
+/*右边导航公共标签头部样式*/
+.section-title {
+    border-bottom: 1px solid #f1f1f1;
+    height: 3em;
+    line-height: 3em;
+    font-size: 0.9em;
+    padding-left: 1em;
+
+}
+
+.tags-section {
+}
+
+/*标签部分样式  右边第2部分*/
+.section-content {
+    padding: 1em 1em 0.3em 1em;
+
+}
+
+.tag-block {
+    width: 50%;
+    float: left;
+    margin-bottom: 0.8em;
+
+}
+
+.tag {
+    border-radius: 3em;
+    background-color: #f4f6f3;
+    color: #454645;
+    padding: .5em .7em;
+    border: none;
+    font-size: 0.8em;
+    display: inline-block;
+    transition: color,0.1s ;
+    cursor:pointer;
+}
+.tag:hover{background-color: #37c700;
+    color: #fff;}
+.tag:hover i{background-color: #37c700;color: #fff;}
+
+.tag > i {
+    color: #37c700;
+}
+
+.tag > span {
+    margin-left: 0.4em;
+
+}
+
+/*加关注样式  右边第3部分*/
+
+.user-block {
+    margin-bottom: 1em;
+    position: relative;
+
+}
+
+.avatar {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.5em 0.5em 0.5em 0;
+    display: block;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: inline-block;
+    margin-top: 0.3em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    cursor: pointer;
+}
+
+.user-info > span {
+    color: #909090;
+    font-size: 0.7em;
+}
+
+.follow-button {
+    color: #37c700;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+
+.no-title {
+    margin-top: 0.8em;
+}
+
+/*每周优质文章  右边第四部分*/
+.section {
+    padding: 1em;
+    color: #007fff;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+.section > img {
+    height: 1.3em;
+    vertical-align: bottom;
+}
+
+.translate-text {
+    margin-left: 0.5em;
+    line-height: 1.3em;
+}
+
+.section > i {
+    position: absolute;
+    right: 1em;
+}
+
+/*发现最火开源项目  右边第五部分*/
+.bg-section img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+/*右边底部样式*/
+
+.footer {
+    position: relative;
+    margin: 1.5em 0 3em 0;
+    color: #909090;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 0.9em;
+}
+
+.icons {
+    width: 10em;
+    margin: 0.7em auto;
+}
+
+.icons img {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 0.4em 0;
+}
+
+.footer-text {
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
