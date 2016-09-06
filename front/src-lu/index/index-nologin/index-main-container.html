@@ -1,2 +1,54 @@
 
+<script type="text/html" id="entries">
+    <@for (var i = 0; i < 4; i++) {@>
+    <@var item = data[i]@>
+    <div class="entry clearfix ">
+        <div class="entry-screenshot float-left">
+            <img class="entry-screenshot-image" src="<@=data[i].figure@>">
+        </div>
+        <div class="float-left entry-info">
+            <div class="entry-title ellipsis"><@=data[i].title@></div>
+            <div class="entry-meta">
+                <div class="action collection-action">
+                    <i class="icon-heart">a</i>
+                    <span class="heart-num">715</span>
+                </div>
+                <div class="action entry-username"><@=data[i].desc@></div>
+                <div class="action"> .</div>
+                <div class="action">3天前</div>
+                <div class="action dropdown dropdown-hover entry-meta-more">
+                    <i class="icon-more dropdown-active">...</i>
+                    <ul class="dropdown-list">
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="http://gold.xitu.io/images/weibo.svg" class="inline">
+                                <span>微博分享</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="ion-android-archive"></i>
+                                <span>Pocket</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="ion-clipboard"></i>
+                                <span>Evernote</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="ion-share"></i>
+                                <span>分享页面</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <@}@>
+</script>
+
 

@@ -4,7 +4,17 @@
         {%include "../index-left-nav.html"%}
         <!--左侧导航栏结束-->
         <!--主体内容开始-->
-        {%include "../index-main-container.html"%}
+        <div class="center">
+            <div class="entry-box">
+                <div class="box-title clearfix">
+                    <div class="float-left">精选</div>
+                    <div class="float-right text-blue pointer">订阅周报</div>
+                </div>
+                <div class="entries" data-sel="entries">
+                    {%include "../index-main-container.html"%}
+                </div>
+            </div>
+        </div>
         <!--主体内容结束-->
         <!--右侧导航栏开始-->
         {%include "../index-right-aside.html"%}
