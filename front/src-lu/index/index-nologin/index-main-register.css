@@ -9,7 +9,6 @@
     position: fixed;
     display: none;
 }
-
 .login-cover{
     position: fixed;
     top:50%;
@@ -25,11 +24,9 @@
     padding:1.5em;
     display: none;
 }
-
 .open{
     display: block;
 }
-
 .icon-close{
     position:absolute;
     top:0.4em;
@@ -38,22 +35,18 @@
     font-size:1.1em;
     cursor: pointer;
 }
-
 .register{
 }
-
 .login-label{
     font-weight:700;
     font-family: PingFangSC-Medium;
     font-size:1.3em;
 }
-
 .input-relative{
     position: relative;
     -webkit-margin-before:0.1em;
     -webkit-margin-after:0.1em;
 }
-
 .welcome-input{
     border:1px solid #e8e8e8;
     border-radius:2px;
@@ -64,7 +57,6 @@
     /*border:1px solid #007fff;*/
     outline:#007fff;
 }
-
 .welcome-input{
     width: 100%;
     display:block;
@@ -74,7 +66,6 @@
     line-height: 1;
     font-weight: 500;
 }
-
 .welcome-large-btn{
     padding:11px;
     width:100%;
@@ -87,7 +78,6 @@
     outline: none;
     cursor: pointer;
 }
-
 .to-login-text{
     line-height:3;
     cursor: pointer;

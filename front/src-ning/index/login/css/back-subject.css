@@ -4,7 +4,6 @@
     margin-top: 80px;
     width: 100%;
     position: absolute;
-
 }
 .head-signin-box{
     width: 1000px;
@@ -12,8 +11,6 @@
     margin: auto;
     /*background-color: rosybrown;*/
 }/*容器*/
-
-
 
 
 /*左边导航*/
@@ -46,7 +43,7 @@
     width: 600px;
     background-color:white;
     margin-left: 16px;
-    position: relative;
+    /*position: relative;*/
 }
 .head-selected{
     width: 560px;
