@@ -22,7 +22,7 @@
         $('[data-sel=header-register]').click(function() {
             $('.hero-cover').addClass('open')
             $('.login-cover').addClass('open')
-        })
+        });
         $('[data-sel=main-register]').click(function() {
             $('.hero-cover').addClass('open')
             $('.login-cover').addClass('open')

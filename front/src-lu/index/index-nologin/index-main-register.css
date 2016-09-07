@@ -115,3 +115,12 @@
     margin:0 8px;
     cursor: pointer;
 }
+
+.register-note{
+    float:right;
+    color:orangered;
+    font-size:14px;
+    line-height: 21px;
+    margin-top:3px;
+    font-weight: 200;
+}
