@@ -15,6 +15,13 @@
             password:password
         }).done(function(data){
             console.log(data)
+            if(data.code === 1){
+                window.location.href ='/user/'+ data.data.id
+            }else{
+                alert('您输入的用户名或密码错误，请重新输入！！')
+            }
+
+
         })
     })
 
