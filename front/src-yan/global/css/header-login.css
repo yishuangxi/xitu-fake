@@ -47,42 +47,42 @@
 }
 
 .nav-img1 {
-    background: url("/static/image/global/1.png");
+    background: url("/static/global/img/1.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img1:hover {
-    background: url("/static/image/global/11.png");
+    background: url("/static/global/img/11.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img2 {
-    background: url("/static/image/global/2.png");
+    background: url("/static/global/img/2.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img2:hover {
-    background: url("/static/image/global/22.png");
+    background: url("/static/global/img/22.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
 }
 
 .nav-img3 {
-    background: url("/static/image/global/3.png");
+    background: url("/static/global/img/3.png");
     width: 18px;
     height: 22px;
     background-repeat: no-repeat;
 }
 
 .nav-img3:hover {
-    background: url("/static/image/global/33.png");
+    background: url("/static/global/img/33.png");
     width: 18px;
     height: 22px;
     background-repeat: no-repeat;

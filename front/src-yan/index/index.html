@@ -36,7 +36,11 @@
 
 
 <!--js与模版文件的引入-->
-{%include "lead-in/js.html"%}
+{%if user%}
+{%include "lead-in/js-login.html"%}
+{%else%}
+{%include "lead-in/js-nologin.html"%}
+{%end%}
 
 </body>
 </html>
