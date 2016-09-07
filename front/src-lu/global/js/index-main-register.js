@@ -23,7 +23,7 @@
                 if(data.code == 1 && username) {
                     alert("注册成功!请登录");
                     $('.hero-cover').removeClass('open');
-                    $('.login-cover').removeClass('open');
+                    $('.register-cover').removeClass('open');
                 }
             })
                 .fail(function() {
@@ -34,9 +34,13 @@
 
         $('.icon-close').click(function(){
             $('.hero-cover').removeClass('open');
-            $('.login-cover').removeClass('open')
-        })
+            $('.register-cover').removeClass('open')
+        });
 
+        $('[data-sel=to-login]').click(function() {
+            $('.register-cover').removeClass('open');
+            $('.login-cover').addClass('open')
+        })
 
     })
 })(jQuery);

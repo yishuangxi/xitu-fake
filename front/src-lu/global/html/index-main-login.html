@@ -1,20 +1,19 @@
 
-<div class="hero-cover"></div>
 <div class="login-cover">
     <i class="icon-close ">X</i>
     <div>
-        <label class="login-label">请先注册<span class="register-note"></span></label>
+        <label class="login-label">登录<span class="login-note"></span></label>
         <p class="input-relative">
-            <input class="welcome-input" data-sel="register-username" type="text" name="usermame" placeholder="昵称" maxlength="20" tabindex="1" >
+            <input class="welcome-input" data-sel="login-username" type="text" name="usermame" placeholder="昵称" maxlength="20" tabindex="1" >
         </p>
         <p class="input-relative">
-            <input class="welcome-input"  type="text" name="phoneOrEmail" placeholder="邮箱/手机" tabindex="2" >
+            <input class="welcome-input" data-sel="login-password" type="password" name="password" placeholder="密码" tabindex="4" maxlength="6">
         </p>
-        <p class="input-relative">
-            <input class="welcome-input" data-sel="register-password" type="password" name="password" placeholder="密码" tabindex="4" maxlength="6">
-        </p>
-        <button class="welcome-large-btn" data-sel="register">立即注册</button>
-        <div class="to-login-text">已有账号登录</div>
+        <button class="welcome-large-btn" data-sel="login">登录</button>
+        <div class="login-note-item">
+            <span class="text-blue float-left to-reset-password" >忘记密码</span>
+            <span class="text-blue float-right to-register">注册账户</span>
+        </div>
         <div class="other-platform">
             <span class="other-platform-text">第三方账号登录：</span>
             <span class="other-platform-img"><img class="other-plaform-inline" src="http://gold.xitu.io/images/weibo.svg"></span>

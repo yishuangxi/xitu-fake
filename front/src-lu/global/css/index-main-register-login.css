@@ -10,7 +10,7 @@
     display: none;
 }
 
-.login-cover{
+.register-cover,.login-cover{
     position: fixed;
     top:50%;
     left: 50%;
@@ -109,6 +109,7 @@
 .other-plaform-inline{
     height: 20px;
     vertical-align: bottom;
+    display: inline;
 }
 
 .other-platform-img{
@@ -116,11 +117,23 @@
     cursor: pointer;
 }
 
-.register-note{
+.register-note,.login-note{
     float:right;
     color:orangered;
     font-size:14px;
     line-height: 21px;
     margin-top:3px;
     font-weight: 200;
+}
+
+.login-note-item{
+    margin-bottom:26px;
+    width:100%;
+    font-size:13px;
+    overflow: hidden;
+}
+
+.to-reset-password,.to-register{
+    line-height: 3;
+    cursor: pointer;
 }

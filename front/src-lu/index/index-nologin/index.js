@@ -20,11 +20,16 @@
 ;(function($) {
     $(function() {
         $('[data-sel=header-register]').click(function() {
-            $('.hero-cover').addClass('open')
-            $('.login-cover').addClass('open')
+            $('.hero-cover').addClass('open');
+            $('.register-cover').addClass('open')
         });
         $('[data-sel=main-register]').click(function() {
-            $('.hero-cover').addClass('open')
+            $('.hero-cover').addClass('open');
+            $('.register-cover').addClass('open')
+        });
+
+        $('[data-sel=head-login]').click(function() {
+            $('.hero-cover').addClass('open');
             $('.login-cover').addClass('open')
         })
     })
