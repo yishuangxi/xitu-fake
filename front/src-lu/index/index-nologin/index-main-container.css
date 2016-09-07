@@ -1,0 +1,167 @@
+.center{
+    width: 37.5em;
+    min-height: 366px;
+    margin-left: 9.7em;
+    padding-top:1em;
+}
+
+.entry-box{
+    width:100%;
+    border-radius:2px;
+    background-color:#fff;
+    margin-bottom:1em;
+}
+
+.box-title{
+    padding:0 1.4em;
+    height:3em;
+    line-height: 3em;
+    color:#666;
+    font-size:0.9em;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.entries{
+    padding:1.4em;
+}
+
+.entry{
+    margin-bottom:0.15em;
+    cursor: pointer;
+}
+
+.entry:hover{
+    background-color: #f8f9fa;
+}
+
+.entry:hover .entry-meta-more{
+    opacity: 1;
+    font-weight: 700;
+    color:#909090;
+}
+
+.entry:hover .entry-title{
+    color:#007fff;
+}
+
+.entry-info{
+    width:75%;
+    padding:.5em 0 .5em 1.4em;
+}
+
+.entry-screenshot-image{
+    width: 3.75em;
+    height:3.75em;
+    border-radius: 2px;
+    margin-top:0.3em;
+}
+
+.entry-screenshot{
+
+}
+
+.entry-title{
+    font-weight:600;
+    line-height:1.5em;
+}
+
+.ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.entry-meta{
+    margin-top:0.2em;
+    font-size:0.8em;
+}
+
+.entry-meta>.collection-action{
+    color:#37c700;
+    margin-right:1em;
+}
+
+.action{
+    display: inline-block;
+    margin-right: 0.5em;
+    color:#909090;
+}
+
+.icon-heart{
+    font-size:1.2em;
+    position: relative;
+    top:0.1em;
+    width: 13px;
+    height: 17px;
+    background-color: #756046;
+}
+
+.heart-num{
+    margin-left: 0.5em;
+}
+
+.entry-username{
+
+}
+
+.entry-meta-more{
+    margin-left:1em;
+    opacity:0;
+}
+
+.entry-meta-more:hover .dropdown-list{
+    opacity: 1;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-hover{
+
+}
+
+.dropdown-list i{
+    width: 1em;
+    text-align: center;
+    display: inline-block;
+    background-color: #b0b0b0;
+    height: 1em;
+}
+
+.dropdown-list{
+    top:1.5em;
+    position: absolute;
+    z-index: 1;
+    /*display: none;*/
+    left: 0;
+    border:1px solid #ddd;
+    background-color: #fff;
+}
+
+.dropdown-list a{
+    color:#666;
+}
+
+.dropdown-list li{
+    white-space: nowrap;
+    padding:0.5em 1em;
+    min-width: 8em;
+}
+
+.dropdown-list li:hover{
+    background-color: #f1f1f1;
+}
+
+img.inline{
+    height: 1.3em;
+    vertical-align: bottom;
+}
+
+img.inline+span,i+span,span+i{
+    margin-left: 0.5em;
+}
+
+.ion-android-archive{
+
+}

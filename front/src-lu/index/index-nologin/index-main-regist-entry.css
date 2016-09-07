@@ -1,0 +1,45 @@
+.register-entry-box,.register-box{
+    padding:0.5em;
+}
+
+.register-box{
+    border:1px solid rgba(0,127,255,.3);
+}
+
+.register-box-title{
+    line-height: 7.5em;
+    font-size:1em;
+    margin-left: 1.5em;
+    font-weight: 700;
+}
+
+.register-box-ul-wrap{
+    display: table;
+    height: 120px;
+    margin-left: 31px;
+}
+
+.register-box-ul{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.register-box-li{
+    font-size:0.8em;
+    line-height: 1.8em;
+}
+
+.register-box-button{
+    font-size:0.8em;
+    vertical-align: middle;
+    border:1px solid #007fff;
+    padding:.5em 1em;
+    border-radius:2px;
+    margin:3.5em 1em 0 0;
+}
+
+.register-box-button:hover{
+    color:#fff;
+    background-color: #007fff;
+    border: none;
+}

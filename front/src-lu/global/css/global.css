@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    outline:none;
+}
+
+img{
+    border: 0;
+}
+
+.clearfix{
+    zoom: 1;
+}
+
+.clearfix:after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: -apple-system,PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif;
+    color:#333;
+}

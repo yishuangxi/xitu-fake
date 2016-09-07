@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gold fake</title>
+    <!--meta开始-->
+    {%include "../global/html/meta-global.html"%}
+    <!--meta结束-->
+    <!--样式引入开始-->
+    {%include "../global/html/css-global.html"%}
+    {%if user%}
+        {% include "index-logined/outercite/css-logined.html"%}
+    {%else%}
+        {%include "index-nologin/outercite/css-nologin.html"%}
+    {%end%}
+    <!--样式引入结束-->
+</head>
+
+<body>
+<!--index头部开始-->
+{%if user%}
+    {%include "../global/html/index-header-logined.html"%}
+{%else%}
+    {% include "../global/html/index-header-nologin.html"%}
+{%end%}
+<!--index头部结束-->
+
+<!--main开始-->
+{%if user%}
+    {%include "index-logined/outercite/html-main-logined.html"%}
+{%else%}
+    {% include "index-nologin/outercite/html-main-nologin.html"%}
+{%end%}
+<!--main结束-->
+
+<!--js开始-->
+{%include "../global/html/js-global.html"%}
+
+{% if user %}
+    {% include "index-logined/outercite/js-index-logined.html"%}
+{% else %}
+    {% include "index-nologin/outercite/js-index-nologin.html" %}
+{% end %}
+<!--js结束-->
+</body>
+</html>
