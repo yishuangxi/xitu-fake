@@ -4,11 +4,13 @@
     margin-top: 80px;
     width: 100%;
     position: absolute;
+
 }
 .head-signin-box{
     width: 1000px;
     height: 500px;
     margin: auto;
+    /*background-color: rosybrown;*/
 }/*容器*/
 
 
@@ -24,6 +26,7 @@
     line-height: 28px;
     text-align: center;
     cursor: pointer;
+    position: relative;
 }
 .head-navigation:hover{
     color: #007fff;
@@ -43,6 +46,7 @@
     width: 600px;
     background-color:white;
     margin-left: 16px;
+    position: relative;
 }
 .head-selected{
     width: 560px;

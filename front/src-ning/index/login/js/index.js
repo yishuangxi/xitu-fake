@@ -1,4 +1,4 @@
-
+// 左边导航数据请求
 ;(function ($) {
     $(function () {
 
@@ -18,10 +18,7 @@
 })(jQuery);
 
 
-
-
-
-
+// 中间文章数据请求
 ;(function () {
     $(function () {
 
