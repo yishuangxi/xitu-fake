@@ -1,0 +1,149 @@
+.content {
+    width: 600px;
+    margin-left: 9.7em;
+    margin-top: 15px;
+}
+
+.box-title {
+    padding: 0 1.4em;
+    background-color: white;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #f1f1f1;
+    border-radius: 2px;
+
+}
+
+.title-left {
+    float: left;
+}
+
+.title-right {
+    float: right;
+    color: #007fff;
+}
+
+.entry {
+cursor:pointer;
+}
+
+.entry:hover {
+    background-color: hsla(0, 0%, 87%, .2);
+}
+
+.entry:hover .entries-title {
+    color: #007fff;
+}
+
+.box-entries {
+    background-color: white;
+    padding: 1.4em;
+    border-radius: 2px;
+    margin-bottom: 1em;
+}
+
+.entry-screenshot {
+}
+
+.entry-screenshot > img {
+    width: 3.75em;
+    height: 3.75em;
+    padding: 0.3em 0;
+}
+
+.entries-title {
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.entries-meta {
+    margin-top: 0.2em;
+    font-size: 0.8em;
+}
+
+.entries-meta >i{display:none;}
+.entry:hover .entries-meta >i{display:inline-block;}
+
+.action {
+    color: #909090;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.collection-action span {
+    margin-left: 0.5em;
+}
+
+.collection-action {
+    color: #37c700;
+    margin-right: 1em;
+}
+
+.entry-info {
+    padding: 0.5em 0.5em 1.4em;
+}
+
+.dropdown-list {
+    list-style: none;
+    position: absolute;
+    margin-left: 180px;
+    z-index: 1;
+    border: 1px solid #ddd;
+    padding: 0;
+    background-color: #fff;
+    display: none;
+}
+
+.dropdown-list a {
+    color: #666;
+}
+
+.dropdown-list li {
+    padding: 0.5em 1em;
+
+}
+
+/*以下为注册登记样式*/
+.register-entry-box {
+    padding: 0.5em;
+margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.register-box {
+    border:1px solid #007fff;
+}
+
+.register-box-title {
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 7.5em;
+    left: 1.5em;
+    position: relative;
+}
+
+.text-blue {
+    color: #007fff;
+}
+
+.register-box-ul {
+    list-style: none;
+    font-size: 0.8em;
+}
+
+.register-box-ul > li {
+    line-height: 1.8em;
+}
+
+.register-box-button {
+    margin: 3.5em 1em 0 0;
+    border: 1px solid #007fff;
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    color: #007fff;
+}
+.register-box-button:hover{
+    color: #fff;
+    background-color: #007fff;
+}

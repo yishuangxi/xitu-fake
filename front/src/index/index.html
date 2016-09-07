@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<style>-->
+    {% include 'index/before-login/html/front.html'%}
+
+    <!--样式-->
+   {% include 'index/before-login/css/before-login-head-css.html'%}
+
+</head>
+
+{% if user %}
+   {% include 'index/before-back/html/behind.html'%}
+{% else %}
+   {% include 'index/before-login/html/ahead.html'%}
+{% end%}
+
+
+
+
+{% if user %}
+
+{% else %}
+  {% include 'index/before-login/html/beforelogin-subject.html'%}
+
+{% end %}
+
+
+
+
+{% include 'index/before-login/html/ccc.html'%}
+
+
+{%  include 'index/before-login/html/js-index.html'%}
+
+
+
+
+</html>

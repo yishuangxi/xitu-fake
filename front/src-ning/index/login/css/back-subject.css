@@ -1,0 +1,121 @@
+
+/*主体的开始*/
+.head-subject{
+    margin-top: 80px;
+    width: 100%;
+    position: absolute;
+}
+.head-signin-box{
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+}/*容器*/
+
+
+
+
+/*左边导航*/
+.head-navigation{
+    padding: 7px 10px 7px 10px;
+    margin: auto;
+    color: #909090;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+.head-navigation:hover{
+    color: #007fff;
+    background-color: hsla(0,0%,87%,.2);
+}
+.head-navigation-2{
+    color: #007fff;
+    font-weight: 600;
+    background-color: hsla(0,0%,87%,.2);
+}
+
+
+
+
+/*中间主体部分*/
+.head-content{
+    width: 600px;
+    background-color:white;
+    margin-left: 16px;
+}
+.head-selected{
+    width: 560px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 42px;
+    padding: 0 20px 0 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.head-content-box{
+    padding: 22px;
+}
+.content-box{
+    width: 100%;
+    margin-bottom: 3px;
+    height: 69px;
+    display: block;
+}
+.content-box:hover .content-explain-overflow{
+    display: block;
+}
+.content-box:hover .content-explain-title{
+    color: #007fff;
+}
+.content-box-img{
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+}
+.content-box-explain{
+    width: 85%;
+    padding: 8px 0 8px 23px;
+}
+.content-explain-title{
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+}
+.content-explain-gaze{
+    font-size: 14px;
+    line-height: 18px;
+    color: #909090;
+}
+.content-explain-gaze div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.content-explain-special{
+    width: 18px;
+    height: 18px;
+    background-color: #37c700;
+}
+.content-explain-overflow{
+    height: 2px;
+    width: 2px;
+    background-color: #909090;
+    margin: 9px 2px 0 2px;
+    display: none;
+}
+.content-box-resources{
+    border: 1px solid #909090;
+    position: absolute;
+    background-color: white;
+    display: none;
+}
+.content-box-resources div{
+    padding: 6px 12px;
+}
+.content-box-resources div:hover{
+    background-color: #f1f1f1;
+}
+.content-resources-box:hover .content-box-resources{
+    display: block;
+}
+
