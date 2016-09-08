@@ -15,16 +15,14 @@
         })
 
 
-<<<<<<< HEAD
-        $('[ data-sel="index-title"]').click(function(){
 
-            var $index = $('[ data-sel="index-title"]').index(this)
 
-=======
+
+
         $('[ data-sel="index-title"]').click(function(){        //index-login导航点击展开
             var $index = $('[ data-sel="index-title"]').index(this)
             var $list =$('.category-list')
->>>>>>> 4c8696fcecd80bb387969d146a7db140d6c05f53
+
             console.log($index)
             if($list.filter('.none')[0] == $list.eq($index)[0]){
                 return
