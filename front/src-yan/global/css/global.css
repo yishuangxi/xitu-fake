@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f5f5;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+#main{width: 100%;background-color: #f4f5f5;padding-top: 65px;}
