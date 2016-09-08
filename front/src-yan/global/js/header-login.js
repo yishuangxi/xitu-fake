@@ -32,6 +32,18 @@
 })();
 
 ;(function(){
+  $('[data-sel="exit"]').click(function(){
+    $.get('/api/logout',function(){
 
+    }).done(function(data){
+      console.log(data)
+      if(data.code === 1){
+        alert('您确定要退出吗？')
+         window.location.reload();
+      }else if(data.code === 0){
+        alert('退出失败')
+      }
+    })
+  })
 })();
 
