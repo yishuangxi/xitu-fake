@@ -63,7 +63,6 @@ $(function () {
 })();
 
 
-
 ;(function ($) {
     $(function () {
 
@@ -74,7 +73,7 @@ $(function () {
                     console.log('data:', response)
 
 
-                    var html = template('aside-nav', response)
+                    var html = template('index-nav', response)
                     $('[data-sel=aside-nav]').append(html)
 
 
@@ -88,52 +87,3 @@ $(function () {
 
 
 
-
-;(function () {
-    $('[data-sel=click-register]').click(function () {
-
-        $('.ning-register-box').css("display","block")
-        console.log('注册窗口打开了')
-
-    })
-
-
-    $('[data-sel=register-Off]').click(function () {
-
-        $('[data-sel=i-want-register]').css("display","none")
-        console.log('注册窗口关了')
-    })
-
-    $('[data-sel=ok]').click(function(){
-        var username = $('[data-sel=register-call]').val()
-        var password = $('[data-sel=register-password]').val()
-        // var mail =$('[data-sel=register-mail]').val()
-
-        if($('[data-sel=ok]').hasClass('registing')){
-            return
-        }
-
-        $('[data-sel=ok]').addClass('registing')
-
-        console.log(username)
-        console.log(password)
-        // console.log(mall)
-
-        $.post('/api/register', {
-            username: username,
-            password: password
-
-        }).done(function (data) {
-            console.log('data ================== ', data)
-            if(data.code === 1){
-                alert("注册成功！请登录")
-                $('[data-sel=i-want-register]').css("display","none")
-            }
-            else {
-                alert("帐号存在或密码错误，请重新输入")
-            }
-
-        })
-
-    })
-})();
