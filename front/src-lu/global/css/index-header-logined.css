@@ -1,0 +1,22 @@
+
+.user-action-box{
+    height: 64px;
+    display: -webkit-flex;
+
+}
+
+.logined-user-handle{
+    padding-left: 26px;
+    cursor: pointer;
+    align-items: center;
+    display: -webkit-flex;
+
+}
+
+.user-action-box img{
+    align-items: center;
+}
+
+.fadeout{
+    display: none;
+}
