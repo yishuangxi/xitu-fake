@@ -9,12 +9,11 @@
     position: fixed;
     display: none;
 }
-<<<<<<< HEAD:front/src-lu/index/index-nologin/index-main-register.css
+
 .login-cover{
-=======
+}
 
 .register-cover,.login-cover{
->>>>>>> 4b9b8ba884f3b0dfb12ce35c83cf4e270510489b:front/src-lu/global/css/index-main-register-login.css
     position: fixed;
     top:50%;
     left: 50%;
