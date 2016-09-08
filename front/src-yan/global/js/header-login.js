@@ -32,7 +32,7 @@
 })();
 
 ;(function(){
-  $('[data-sel="exit"]').click(function(){
+  $('[data-sel="exit"]').click(function(){  //登出
     $.get('/api/logout',function(){
 
     }).done(function(data){

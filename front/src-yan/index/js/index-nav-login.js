@@ -2,7 +2,8 @@
  * Created by db on 16/9/8.
  */
 ;(function(){                           //导航关注栏喧染
-   var url = '/api/cates?user_id=100000&page=1'
+   var url = '/api/cates?user_id='+$('[data-sel="go-home"]').attr('data-userid')+'&page=1'
+  console.log(url)
   $.get(url,function(){
 
   }).done(function(data){
@@ -26,4 +27,6 @@
       $(this).removeClass('none')
     })
   })
+
+
 })();
