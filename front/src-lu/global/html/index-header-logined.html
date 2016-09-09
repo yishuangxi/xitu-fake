@@ -26,8 +26,35 @@
                 <img class="fadeout" src="static/image/33.png">
             </li>
             <li class="float-left logined-user-handle">
-                <img src="static/image/user.png">
+                <img class="user-img" src="https://avatars.githubusercontent.com/u/20034728?v=3">
             </li>
         </ul>
+
+        <ul class="user-dropdown-list" data-sel="list-content">
+            <div class="user-dropdown-list-box">
+                <li data-sel="go-home" data-userid="{{user.id}}">我的主页</li>
+                <li>我的收藏</li>
+                <li>标签管理</li>
+            </div>
+            <div  class="user-dropdown-list-box">
+                <li>设置</li>
+                <li data-sel="list2">关于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>
+                    <ul class="user-dropdown-list user-dropdown-list2"  data-sel="list2-content">
+                        <div class="user-dropdown-list-box">
+                            <li>下载应用</li>
+                            <li>关于</li>
+                            <li>加入我们</li>
+                            <li>翻译计划</li>
+                            <li>合作伙伴</li>
+                        </div>
+                    </ul>
+                </li>
+
+            </div>
+            <div class="user-dropdown-list-box">
+                <li data-sel="exit">登出</li>
+            </div>
+        </ul>
+
     </div>
 </div>

@@ -1,7 +1,36 @@
 
 
-<script type="text/html"  id="notice-hots">
-    <ul class="hot-entry">
-        <li class="home-entry-item"></li>
-    </ul>
+<script type="text/html" id="content-login">
+    <@ for(var i = 0; i < data.length; i++){ @>
+    <@ var nav = data[i]@>
+    <li class="entry-item"  >
+
+        <div class="screenshot float-left ">
+            <img src="<@= nav.figure @>">
+        </div>
+        <div class="entry-info">
+            <div class="info-row">
+                <div class="info-top-left"><a class="_blank "><@= nav.title @></a></div>
+                <div class="entry-date-box float-right">
+                    <div class="entry-date">1小时前</div>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="meta-badge">
+                    <i>^_^</i>
+                    <span class="count">32</span>
+                </div>
+                <div class="meta-badge">
+                    <i>11</i>
+                </div>
+                <div class="float-right">
+                    <div class="meta-tag float-right">Android</div>
+                    <div class="meta-tag">iOS</div>
+                    <div class="meta-tag">UI Kit</div>
+                </div>
+            </div>
+
+        </div>
+    </li>
+    <@}@>
 </script>
