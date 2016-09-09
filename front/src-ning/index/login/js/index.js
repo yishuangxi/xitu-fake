@@ -95,9 +95,9 @@
             username: signusername,
             password: sigpassword
         }).done(function (data) {
-            console,log(data)
+            console.log(data)
             if(data.code === 1){
-                console.log('1'+data)
+                // console.log('1'+data)
 
                 window.location.href='/user/'+data.data.id
             }else{

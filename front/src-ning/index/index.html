@@ -7,36 +7,49 @@
 
     <!--这是没有登录的css接口-->
     {% include 'login/interface/interface-css.html'%}
-
+    <!--已登录的css-->
+    {%include 'back/back-interface/back-head-css.html'%}
 
 
 </head>
+{%if user%}
+   <!--这里是登录的头部-->
+   {% include 'back/html/signin-home.html'%}
+{%else%}
+    <!--没有登录的头部-->
+   {% include 'login/html/back-head.html'%}
+{%end%}
 
 
-<!--没有登录的头部-->
-{% include 'login/html/back-head.html'%}
-
-
-
-<!--引入注册HTML-->
 <!--注册的HTML-->
 {%include 'login/html/register.html'%}
 <!--登录的HTML-->
 {%include 'login/html/sign-in.html'%}
 
 
-{% include 'login/html/back-subject.html'%}
-<!--没有登录的主体-->
+{%if user%}
+    <!--这里是已登录的主体-->
+    {%include 'back/html/back-subject.html'%}
+{%else%}
+    <!--没有登录的主体-->
+    {%include 'login/html/back-subject.html'%}
+{%end%}
+
+
 
 
 
 
 
 <!--这里是全局js-->
-{% include 'login/interface/global-js.html'%}
+{%include 'login/interface/global-js.html'%}
+
 
 
 <!--这里是没有登录的js接口-->
-{% include 'login/interface/interface-js.html'%}
+{%include 'login/interface/interface-js.html'%}
+<!--这是已登录的js接口-->
+{%include 'back/back-interface/back-js.html'%}
+
 
 </html>

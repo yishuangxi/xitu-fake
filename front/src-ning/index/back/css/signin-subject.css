@@ -1,0 +1,70 @@
+
+.sign-subject{
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    top: 64px;
+    min-height: 700px;
+    padding-top: 16px;
+}
+.sign-subject-navigation{
+    margin-right: 24px;
+    float: left;
+    position: fixed;
+    top: 80px;
+
+}
+.sign-navigation-first{
+    margin-bottom: 7px;
+    width: 136px;
+}
+.sign-navigation-first-box{
+    padding: 5px 0 5px 8px;
+    font-weight: 600;
+    color: #333;
+
+}
+.sign-navigation-first-brother{
+    padding: 5px 0 5px 8px;
+    margin-top: 15px;
+    color: #909090;
+}
+.sign-navigation-first-brother2{
+    margin-bottom: 15px;
+    padding: 5px 0 5px 8px;
+    color: #909090;
+}
+.sign-navigation-first-brother3{
+    padding: 5px 0 5px 8px;
+    color: #909090;
+}
+.sign-header-action{
+    padding: 0 8px 0 8px;
+    width: 824px;
+    float: right;
+    color: #909090;
+    border-bottom: 1px solid #909090;
+}
+.sign-action{
+    padding: 14px;
+    font-size: 15px;
+    float: left;
+}
+.sign-action2{
+    float: right;
+}
+.sign-entries{
+    margin-top: 16px;
+    float: right;
+    width: 840px;
+}
+.sign-entry-list{
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 92px;
+}
+.sign-entry-list img{
+    height: 82px;
+    padding: 5px 24px 5px 0;
+    float: left;
+}
