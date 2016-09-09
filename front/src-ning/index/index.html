@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--HTML的头-->
+
+    <!--这是没有登录的css接口-->
+    {% include 'login/interface/interface-css.html'%}
+
+
+
+</head>
+
+
+<!--没有登录的头部-->
+{% include 'login/html/back-head.html'%}
+<!--引入注册HTML-->
+{%include 'login/html/sign-in.html'%}
+
+
+{% include 'login/html/back-subject.html'%}
+<!--没有登录的主体-->
+
+
+
+
+
+<!--这里是全局js-->
+{% include 'login/interface/global-js.html'%}
+
+
+<!--这里是js接口-->
+{% include 'login/interface/interface-js.html'%}
+
+</html>

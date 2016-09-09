@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>artTemplate模板</title>
+</head>
+<body>
+<style type="text/css">
+    .red {
+        color: red
+    }
+
+    .li {
+        border: 1px solid red;
+    }
+</style>
+<div id="content"></div>
+<script id="test" type="text/html">
+    <div><%= name %></div>
+    <ul>
+        <% for(var i = 0; i < student.length; i ++) { %>
+
+            <li class="li">
+                <div class="a">
+                    <div class="b"><%= name %><%= student[i].title %></div>
+                    <ul class="c">
+                        <% for(var j = 0; j < student[i].list.length; j ++){ %>
+                            <li><%= student[i].list[j].name %></li>
+                        <% } %>
+                    </ul>
+                </div>
+
+            </li>
+        <% } %>
+
+    </ul>
+
+
+</script>
+
+<script type="text/javascript" src="../static/js/global/jquery.js"></script>
+<script type="text/javascript" src="../static/js/global/template.js"></script>
+
+<script type="text/javascript">
+
+    var obj = {
+        student: [
+
+            {
+                title: 'Student1',
+                list: [
+                    {name: "yss", age: "24"},
+                    {name: "lz", age: "28"},
+                    {name: "fj", age: "28"}
+                ]
+            },
+
+            {
+                title: 'Student2',
+                list: [
+                    {name: "yss", age: "24"},
+                    {name: "lz", age: "28"},
+                    {name: "fj", age: "28"}
+                ]
+            }
+        ],
+        name:"yan shanshan "
+    };
+
+
+    //    var html = template('test', obj);
+
+
+    var html = template('test', obj);
+
+    document.getElementById('content').innerHTML = html;
+
+    //    var newers = [
+    //        {name: "yss",age:"24"},
+    //        {name: "lz",age:"28"},
+    //        {name: "fj",age:"28"}
+    //    ];
+    //
+    //    var tplStr = template("test",newers);
+    //
+    //    $("body").append(tplStr);
+
+</script>
+
+</body>
+</html>

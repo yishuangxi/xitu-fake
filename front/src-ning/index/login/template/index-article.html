@@ -1,0 +1,41 @@
+
+<script type="text/html" id="homepage-article">
+    <@ for(var i = 0; i < data.length; i++) {@>
+    <@ var na = data[i] @>
+
+    <a href="<@= na.link@>" class="content-box">
+        <img class="float-left content-box-img" src="<@= na.figure@>">
+        <div class="content-box-explain float-left">
+            <div class="content-explain-title"><@= na.title@></div>
+            <div class="content-explain-gaze float-left">
+                <div class="float-left content-explain-special"></div>
+                <div class="float-left font-green"><@= na.desc@></div>
+                <div class="float-left"><@= na.id@></div>
+                <div class="float-left">.</div>
+                <div class="float-left"><@= na.created_at@></div>
+                <div class="float-left content-resources-box">
+                    <span class="content-explain-overflow float-left"></span>
+                    <span class="content-explain-overflow float-left"></span>
+                    <span class="content-explain-overflow float-left"></span>
+                    <div class="content-box-resources">
+                        <div>微博分享</div>
+                        <div>Pocket</div>
+                        <div>Evernote</div>
+                        <div>分享页面</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <@}@>
+</script>
+
+
+
+
+
+
+
+
+

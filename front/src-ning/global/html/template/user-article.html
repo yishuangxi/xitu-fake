@@ -1,0 +1,24 @@
+<script type="text/html" id ='user-article'>
+    <@ for( var i = 0; i < data.length; i ++ ) {@>
+    <@ var user = data[i] @>
+
+
+        <div class="entries-box">
+            <img class="entries-box-img" src="http://ac-mhke0kuv.clouddn.com/b0ef6bcc72e181e38688.png?imageView/1/w/164/h/164/q/95/interlace/1">
+            <div class="entry-info-box">
+                <div class="info-row-box info-row-box-a">
+                    <span> <@= user.title @> </span>
+                    <div class="info-entry-date"> <@= user.created_at @> </div>
+                </div>
+                <div class="info-row-box">
+                    <div class="info-row-box-tag"> <@= user.desc @> </div>
+                    <div class="info-row-box-tag"> <@= user.tag @> </div>
+                    <div class="info-row-box-tag"> <@= user.type @> </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    <@}@>
+</script>

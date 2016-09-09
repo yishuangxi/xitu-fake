@@ -1,0 +1,38 @@
+/*<!--头-->*/
+.head{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+.head-box{
+    width: 1000px;
+    margin: auto;
+    height: 64px;
+}
+.head-box img{
+    height: 32px;
+    padding: 16px 12px 16px 12px;
+}
+.head-community{
+    letter-spacing: .2em;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 23px 12px 23px 12px;
+    margin-left: 36px;
+}
+.head-signin{
+    padding: 22px 12px 22px 12px;
+}
+.head-signin div{
+    height: 19px;
+}
+.head-signin-div{
+    padding-left: 7px;
+    line-height: 19px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.head-signin-div:hover{
+    color: #0371df;
+}
+

@@ -28,7 +28,7 @@
 
 
 
-    var url='/api/articles/read/
+    var url='/api/articles/read/'
 
     $.ajax(url,{
         method:"GET",

@@ -45,5 +45,23 @@
       }
     })
   })
+
+;(function(){
+    $('[data-sel="contribute"]').click(function(){
+      window.location.href='http://localhost:8888/publish'
+    })
+
+
+     $('[data-sel="go-homepage"]').click(function(){
+        window.location.href='http://localhost:8888'
+    })
+
+    $('[ data-sel="go-home"]').click(function(){   //点击我的主页跳转到个人主页页面
+
+            window.location.href='/user/'+$('[data-sel="go-home"]').attr('data-userid')
+
+    })
+  })();
+
 })();
 
