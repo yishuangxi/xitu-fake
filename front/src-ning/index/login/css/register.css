@@ -9,8 +9,6 @@
     position: fixed;
     display: none;
 }
-
-.register-cover,
 .login-cover{
     position: fixed;
     top:50%;
@@ -87,45 +85,27 @@
     color:#007fff;
     text-align: center;
 }
-
 .other-platform{
     margin-top:16px;
     text-align: center;
 }
-
 .other-platform-text{
     font-size:14px;
     color:#666;
 }
-
 .other-plaform-inline{
     height: 20px;
     vertical-align: bottom;
-    display: inline;
 }
-
 .other-platform-img{
     margin:0 8px;
     cursor: pointer;
 }
-
-.register-note,.login-note{
+.register-note{
     float:right;
     color:orangered;
     font-size:14px;
     line-height: 21px;
     margin-top:3px;
     font-weight: 200;
-}
-
-.login-note-item{
-    margin-bottom:26px;
-    width:100%;
-    font-size:13px;
-    overflow: hidden;
-}
-
-.to-reset-password,.to-register{
-    line-height: 3;
-    cursor: pointer;
 }

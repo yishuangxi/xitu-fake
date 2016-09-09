@@ -1,22 +1,24 @@
 
-.hero-cover{
+.sign-hero-cover{
     background-color: rgba(0,0,0,.6);
-    z-index: 99;
+    z-index: 1;
     top:0;
     left:0;
     right: 0;
     bottom: 0;
     position: fixed;
+    box-sizing: border-box;
+    background-color: rosybrown;
     display: none;
 }
-.login-cover{
+.sign-login-cover{
     position: fixed;
     top:50%;
     left: 50%;
     margin-top:-10em;
     margin-left:-10em;
+    box-sizing: border-box;
     width:320px;
-    min-height:21em;
     background-color: #fff;
     z-index:111;
     border-radius: 2px;
@@ -24,15 +26,10 @@
     padding:1.5em;
     display: none;
 }
-
-
-
-
-
-.open{
+.sign-open{
     display: block;
 }
-.icon-close{
+.sign-icon-close{
     position:absolute;
     top:0.4em;
     right:0.7em;
@@ -40,19 +37,19 @@
     font-size:1.1em;
     cursor: pointer;
 }
-.register{
+.sign-register{
 }
-.login-label{
+.sign-login-label{
     font-weight:700;
     font-family: PingFangSC-Medium;
     font-size:1.3em;
 }
-.input-relative{
+.sign-input-relative{
     position: relative;
     -webkit-margin-before:0.1em;
     -webkit-margin-after:0.1em;
 }
-.welcome-input{
+.sign-welcome-input{
     border:1px solid #e8e8e8;
     border-radius:2px;
     margin:10px auto;
@@ -62,7 +59,7 @@
     /*border:1px solid #007fff;*/
     outline:#007fff;
 }
-.welcome-input{
+.sign-welcome-input{
     width: 100%;
     display:block;
     box-shadow:none;
@@ -71,7 +68,7 @@
     line-height: 1;
     font-weight: 500;
 }
-.welcome-large-btn{
+.sign-welcome-large-btn{
     padding:11px;
     width:100%;
     background: #007fff;
@@ -83,34 +80,47 @@
     outline: none;
     cursor: pointer;
 }
-.to-login-text{
+.sign-to-login-text{
     line-height:3;
     cursor: pointer;
     font-size:14px;
     color:#007fff;
     text-align: center;
 }
-.other-platform{
+.sign-other-platform{
     margin-top:16px;
     text-align: center;
 }
-.other-platform-text{
+.sign-other-platform-text{
     font-size:14px;
     color:#666;
 }
-.other-plaform-inline{
+.sign-other-plaform-inline{
     height: 20px;
     vertical-align: bottom;
 }
-.other-platform-img{
+.sign-other-platform-img{
     margin:0 8px;
     cursor: pointer;
 }
-.register-note{
+.sign-register-note{
     float:right;
     color:orangered;
     font-size:14px;
     line-height: 21px;
     margin-top:3px;
     font-weight: 200;
+}
+.sign-login-note-item{
+    height: 38px;
+    width: 100%;
+    color: #007fff;
+}
+.sign-forget{
+    float: left;
+    line-height: 38px;
+}
+.sign-transformation{
+    float: right;
+    line-height: 38px;
 }

@@ -49,13 +49,13 @@ gulp.task('ning-m', function(){
 
 
 
-gulp.task('watch', function(){
+gulp.task('ning-watch', function(){
     gulp.watch(['src-ning/**'], ['ning-m'])
     // gulp.watch(['src/static/css/**/*.css'], ['css'])
     // gulp.watch(['src/static/js/**/*.js'], ['js'])
     // gulp.watch(['dist/html'], ['ning-web'])
 })
 
-gulp.task('ning', ['watch','ning-m'])
+gulp.task('ning', ['ning-watch','ning-m'])
 
 // gulp.task('build', ['build', 'watch'])

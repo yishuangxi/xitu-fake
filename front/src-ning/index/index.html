@@ -15,7 +15,13 @@
 
 <!--没有登录的头部-->
 {% include 'login/html/back-head.html'%}
+
+
+
 <!--引入注册HTML-->
+<!--注册的HTML-->
+{%include 'login/html/register.html'%}
+<!--登录的HTML-->
 {%include 'login/html/sign-in.html'%}
 
 
@@ -30,7 +36,7 @@
 {% include 'login/interface/global-js.html'%}
 
 
-<!--这里是js接口-->
+<!--这里是没有登录的js接口-->
 {% include 'login/interface/interface-js.html'%}
 
 </html>

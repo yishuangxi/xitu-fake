@@ -8,8 +8,6 @@
         $.ajax(url, {
             method: 'GET',
             success: function(response){
-                // console.log('data:', response)
-                // console.log('ning')
                 var html = template('index-nav', response)
                 $('[data-sel=head-navigation-s]').append(html)
             }
@@ -34,6 +32,16 @@
         $('[data-sel=register-container]').css("display", "none")
         $('[data-sel=register-case]').css("display", "none")
     })
+
+    // 注册上面的登录进行事件
+    $returnSignIn =$('[data-sel=return-signin]')
+    $returnSignIn.click(function () {
+        $('[data-sel=register-container]').css("display", "none")
+        $('[data-sel=register-case]').css("display", "none")
+        $('[data-sel=signin-container]').css("display", "block")
+    })
+
+
 
 
 
@@ -60,6 +68,55 @@
         })
     })
 })();
+
+;(function () {
+    // 登录的打开
+    var $signin =$('[data-sel=signin]')
+    $signin.click(function () {
+        $('[data-sel=signin-container]').css("display", "block")
+    })
+    // 登录的关闭
+    var $signinswitch=$('[data-sel=signin-switch]')
+    $signinswitch.click(function () {
+        $('[data-sel=signin-container]').css("display", "none")
+    })
+
+    // 点击登录事件
+    var  $loginl = $('[data-sel=login]')
+    $loginl.click(function () {
+        var signusername =$('[data-sel=signin-accounts]').val()
+        var sigpassword= $('[data-sel=signin-password]').val()
+
+
+        console.log(signusername)
+        console.log(sigpassword)
+        // 登录数据请求
+        $.post('/api/login',{
+            username: signusername,
+            password: sigpassword
+        }).done(function (data) {
+            console,log(data)
+            if(data.code === 1){
+                console.log('1'+data)
+
+                window.location.href='/user/'+data.data.id
+            }else{
+                alert('您输入的用户名或密码错误，请重新输入!!')
+            }
+        })
+    })
+
+    // 对登录上面的注册进行点击事件
+    var $returnRegister =$('[data-sel=return-register]')
+    $returnRegister.click(function () {
+        $('[data-sel=signin-container]').css("display", "none")
+        $('[data-sel=register-container]').css("display", "block")
+        $('[data-sel=register-case]').css("display", "block")
+    })
+
+})();
+
+
 
 
 
