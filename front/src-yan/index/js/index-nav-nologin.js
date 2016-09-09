@@ -8,8 +8,12 @@
             method: 'GET',
             success: function(response){
                 var html = template('aside-nav', response)
-               $('[data-sel="aside-nav"]').after(html)
+               $('[data-sel="aside-nav"]').prepend(html)
             }
         })
     });
+
+
+
+
 })(jQuery);

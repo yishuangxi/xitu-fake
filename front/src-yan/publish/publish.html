@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   {%include "../global/html/meta.html"%}
+  <title>投稿</title>
+   <!-- 公共样式-->
+    {%include "../global/lead-in/css-global.html"%}
+   <!-- 公共头部样式-->
+    {%include "lead-in/css-header.html"%}
+  <!--主要部分样式-->
+  {%include "lead-in/css-main.html"%}
+</head>
+<body>
+<!--头部html（已包括下拉列表）-->
+{%include "../global/lead-in/header.html"%}
+<!--主体部分HTML-->
+{%include "html/main.html"%}
+
+
+
+
+<!--模板与js-->
+{%include "../global/lead-in/js.html"%}
+<!--js文件引入-->
+{%if user %}
+{% include "lead-in/js-header-login.html" %}
+{% else %}
+{% include "lead-in/js-header-nologin.html"%}
+{% end %}
+
+</body>
+</html>
