@@ -91,7 +91,7 @@ label{
     margin-right: 16px;
 }
 
-.tags>span{
+span.tag{
     cursor: pointer;
     margin-right: 0.6em;
     padding:0.2em 0.7em;
@@ -134,7 +134,7 @@ label{
     width: 5em;
 }
 
-.tag:hover,.choose{
+span.choose{
     color:#007fff;
     border-color: rgba(0,127,255,.15);
     background-color: rgba(0,127,255,.05);
@@ -220,3 +220,6 @@ input[type=file]{
     top:0;
 }
 
+input.outline-blue,textarea.outline-blue,.new-tag-input.outline-blue{
+    border-color: #007fff;
+}
