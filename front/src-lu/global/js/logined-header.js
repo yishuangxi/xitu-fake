@@ -28,7 +28,8 @@
             console.log("success");
             if(data.code == 1) {
                 alert("退出成功!");
-                window.location.reload();
+                //window.location.reload();
+                location='/';
             } else {
                 alert("退出失败!");
             }

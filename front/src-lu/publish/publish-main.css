@@ -134,6 +134,12 @@ label{
     width: 5em;
 }
 
+.tag:hover,.choose{
+    color:#007fff;
+    border-color: rgba(0,127,255,.15);
+    background-color: rgba(0,127,255,.05);
+}
+
 .dropdown .inline{
     display: inline-block;
     padding: 0 0.2em;
@@ -213,3 +219,4 @@ input[type=file]{
     left: 0;
     top:0;
 }
+
