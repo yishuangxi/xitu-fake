@@ -19,12 +19,12 @@ class ApiArticle(ApiArticleBase):
   @login
   @coroutine
   def post(self):
-    title = self.get_argument('title', None)
-    link = self.get_argument('link', None)
-    desc = self.get_argument('desc', None)
-    figure = self.get_argument('figure', None)
-    _type = self.get_argument('type', None)
-    tag = self.get_argument('tag', None)
+    title = self.get_argument('title', '')
+    link = self.get_argument('link', '')
+    desc = self.get_argument('desc', '')
+    figure = self.get_argument('figure', '')
+    _type = self.get_argument('type', '1')
+    tag = self.get_argument('tag', '')
     cate_id = self.get_argument('cate_id', None)
     user_id = self.get_current_user_id()
 

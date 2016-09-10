@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
    {%include "../global/html/meta.html"%}
-  <title>个人主页</title>
+  <title>投稿</title>
    <!-- 公共样式-->
     {%include "../global/lead-in/css-global.html"%}
- <!-- 公共头部样式-->
+   <!-- 公共头部样式-->
     {%include "lead-in/css-header.html"%}
-  <!--主体部分样式-->
-   {%include "lead-in/css-main.html"%}
-
-
+  <!--主要部分样式-->
+  {%include "lead-in/css-main.html"%}
 </head>
 <body>
 <!--头部html（已包括下拉列表）-->
@@ -30,5 +28,6 @@
 {% else %}
 {% include "lead-in/js-header-nologin.html"%}
 {% end %}
+
 </body>
 </html>

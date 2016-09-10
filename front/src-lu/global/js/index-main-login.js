@@ -25,7 +25,10 @@
                     alert("登录成功!");
                     $('.hero-cover').removeClass('open');
                     $('.login-cover').removeClass('open');
+<<<<<<< HEAD
                     window.location.reload();
+=======
+>>>>>>> 8641778987b294c7f68c0670f36f5c7eaca1696d
                 } else {
                     $('.login-note').text("*用户名不存在或密码错误");
                 }

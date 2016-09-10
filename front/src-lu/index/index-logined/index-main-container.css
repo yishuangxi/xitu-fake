@@ -131,7 +131,11 @@
     color:rgba(43,68,93,.4);
 }
 
+<<<<<<< HEAD
 .info-appear,span.info-appear{
+=======
+span.info-appear{
+>>>>>>> 8641778987b294c7f68c0670f36f5c7eaca1696d
     font-weight: 600;
     color:#007fff;
 }
@@ -141,6 +145,7 @@
 }
 
 .home-entry-item{
+<<<<<<< HEAD
     min-height:92px;
     position:relative;
     align-items: center;
@@ -230,4 +235,11 @@
 
 .true{
     display: block;
+=======
+    padding:0 1.5em;
+    min-height:92px;
+    position:relative;
+    display:flex;
+    align-items: center;
+>>>>>>> 8641778987b294c7f68c0670f36f5c7eaca1696d
 }
