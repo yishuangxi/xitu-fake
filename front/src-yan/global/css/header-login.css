@@ -54,11 +54,14 @@
     background-repeat: no-repeat;
 }
 
+
+
 .nav-img1:hover {
     background: url("/static/global/img/11.png");
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
+    color: blue;
 }
 
 .nav-img2 {

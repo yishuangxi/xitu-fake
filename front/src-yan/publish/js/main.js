@@ -1,11 +1,9 @@
 /**
- * Created by db on 16/8/19.
+ * Created by db on 16/9/9.
  */
-// /上面是页面加载的JS/
+
 ;(function(){
   var $click =$('.click')
-
-
     $click.focus(function(){
         var $clickIndex = $click.index(this)
         $click.eq($clickIndex).addClass('click-blue')
@@ -48,14 +46,7 @@
         var type = $('.c-tag-style').attr('data-cateid')
         var tag =$('[data-sel=share-tag]').val()
         var cate_id=$('.c-tag-style-id').attr('data-cateid')
-
-
-        console.log(website)
-        console.log(title)
-        console.log(describe)
-        console.log(type)
-        console.log(tag)
-        console.log(cate_id)
+        console.log('tag',tag)
 
         $.post('/api/article',{
             title:title,
@@ -65,10 +56,14 @@
             type:type,
             cate_id:cate_id
 
-
         }).done(function (data) {
-            console.log("data===",data)
+            if(data.code===1){
+                console.log('成功')
+            }
 
+        }).fail(function(){
+            console.log('失败')
         })
     })
 })();
+

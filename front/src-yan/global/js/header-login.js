@@ -33,13 +33,17 @@
 
 ;(function(){
   $('[data-sel="exit"]').click(function(){  //登出
+    var ret = confirm('您确定要退出吗？')
+    if(!ret){
+      return
+    }
     $.get('/api/logout',function(){
 
     }).done(function(data){
       console.log(data)
       if(data.code === 1){
-        alert('您确定要退出吗？')
-         window.location.reload();
+         //window.location.reload();
+        location = '/'
       }else if(data.code === 0){
         alert('退出失败')
       }
@@ -47,19 +51,25 @@
   })
 
 ;(function(){
-    $('[data-sel="contribute"]').click(function(){
+    $('[data-sel="contribute"]').click(function(){  //点击＋进入投稿页面
       window.location.href='http://localhost:8888/publish'
     })
 
 
-     $('[data-sel="go-homepage"]').click(function(){
+     $('[data-sel="go-homepage"]').click(function(){  //点图片掘金跳转到登陆后首页
         window.location.href='http://localhost:8888'
     })
 
     $('[ data-sel="go-home"]').click(function(){   //点击我的主页跳转到个人主页页面
 
             window.location.href='/user/'+$('[data-sel="go-home"]').attr('data-userid')
+    })
 
+
+    $('[data-sel="contribute"]').click(function(){
+
+      $('.nav-img1').css("background-image","/static/global/img/11.png")
+       console.log('变色')
     })
   })();
 
