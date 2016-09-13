@@ -1,0 +1,133 @@
+
+.hero-cover{
+    background-color: rgba(0,0,0,.6);
+    z-index: 99;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: none;
+}
+
+.login-cover{
+}
+
+.register-cover,.login-cover{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin-top:-10em;
+    margin-left:-10em;
+    width:320px;
+    min-height:21em;
+    background-color: #fff;
+    z-index:111;
+    border-radius: 2px;
+    border:1px solid #f5f5f5;
+    padding:1.5em;
+    display: none;
+}
+.open{
+    display: block;
+}
+.icon-close{
+    position:absolute;
+    top:0.4em;
+    right:0.7em;
+    color:#909090;
+    font-size:1.1em;
+    cursor: pointer;
+}
+.register{
+}
+.login-label{
+    font-weight:700;
+    font-family: PingFangSC-Medium;
+    font-size:1.3em;
+}
+.input-relative{
+    position: relative;
+    -webkit-margin-before:0.1em;
+    -webkit-margin-after:0.1em;
+}
+.welcome-input{
+    border:1px solid #e8e8e8;
+    border-radius:2px;
+    margin:10px auto;
+    padding:11px 10px;
+    font-size:14px;
+    box-sizing: border-box;
+    /*border:1px solid #007fff;*/
+    outline:#007fff;
+}
+.welcome-input{
+    width: 100%;
+    display:block;
+    box-shadow:none;
+    background-color: #fff;
+    color:inherit;
+    line-height: 1;
+    font-weight: 500;
+}
+.welcome-large-btn{
+    padding:11px;
+    width:100%;
+    background: #007fff;
+    color:#fff;
+    border-radius: 2px;
+    border:none ;
+    font-size:16px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+.to-login-text{
+    line-height:3;
+    cursor: pointer;
+    font-size:14px;
+    color:#007fff;
+    text-align: center;
+}
+
+.other-platform{
+    margin-top:16px;
+    text-align: center;
+}
+
+.other-platform-text{
+    font-size:14px;
+    color:#666;
+}
+
+.other-plaform-inline{
+    height: 20px;
+    vertical-align: bottom;
+    display: inline;
+}
+
+.other-platform-img{
+    margin:0 8px;
+    cursor: pointer;
+}
+
+.register-note,.login-note{
+    float:right;
+    color:orangered;
+    font-size:14px;
+    line-height: 21px;
+    margin-top:3px;
+    font-weight: 200;
+}
+
+.login-note-item{
+    margin-bottom:26px;
+    width:100%;
+    font-size:13px;
+    overflow: hidden;
+}
+
+.to-reset-password,.to-register{
+    line-height: 3;
+    cursor: pointer;
+}

@@ -21,7 +21,7 @@ gulp.task('lu-merge', function(){
 //        .pipe(gulp.dest('dist'))
 //});
 
-gulp.task('watch', function() {
+gulp.task('lu-watch', function() {
     gulp.watch(['src-lu/**'], ['lu-merge']);
     //gulp.watch(['src-lu/static/css/**/*.css'], ['css']);
     //gulp.watch(['src-lu/static/js/**/*.js'], ['js']);
@@ -42,4 +42,4 @@ gulp.task('watch', function() {
 //        .pipe(gulp.dest('dist-lu'))
 //});
 
-gulp.task('lu', ['watch','lu-merge']);
+gulp.task('lu', ['lu-watch','lu-merge']);

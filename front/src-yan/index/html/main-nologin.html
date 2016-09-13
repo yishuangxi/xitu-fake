@@ -1,0 +1,26 @@
+<div id='main'>
+    <div class="container clearfix " data-sel="aside-nav">
+        <!--－－－－－－－左边导航－－－－－－－-->
+        {%include "main-nologin/nav-left.html"%}
+        <div class="content-whole">
+            <!--－－－－－－－中间内容 －－－－－－－-->
+            <div class="content" style="">
+                <div class="content-box clearfix">
+                    <!--－－－－－－－中间内容标题 －－－－－－－-->
+                    {%include "main-nologin/content-title-middle.html"%}
+                    <!--－－－－－－－中间内容精选文章 －－－－－－－-->
+                    <div class="box-entries" data-sel="content-nologin">
+                    {%include "main-nologin/content-middle.html"%}
+
+                    </div>
+                    <!--－－－－－－－中间内容注册登陆 －－－－－－－-->
+                    {%include "main-nologin/content-register-entry-middle.html"%}
+                </div>
+
+            </div>
+
+        </div>
+        <!--－－－－－－－右边挂件 －－－－－－－-->
+        {%include "main-nologin/aside-right.html"%}
+    </div>
+</div>

@@ -1,0 +1,35 @@
+
+
+<div class="home">
+    <div class="container banner-container">
+        <img src="http://ac-mhke0kuv.clouddn.com/366c470ea60143a75552.jpg">
+        <div class="banner-close"><i>+</i></div>
+    </div>
+    <div class="container home-list-container clearfix">
+
+        {%include "../index-logined-left-nav.html"%}
+
+        <div class="home-entry-list">
+            <div class="header-action clearfix">
+                <div class="action-box float-left">
+                    <span class="info-appear">热门</span>
+                    <span>最新</span>
+                    <span>评论</span>
+                </div>
+                <div class="action-box float-right">
+                    <span>本周最热</span>
+                    <span>本月最热</span>
+                    <span>历史最热</span>
+                </div>
+            </div>
+
+            <ul class="home-entry-item hot-entry">
+                {%include "../index-logined-content.html"%}
+            </ul>
+
+            {%include "../index-logined-content.html"%}
+
+
+        </div>
+    </div>
+</div>

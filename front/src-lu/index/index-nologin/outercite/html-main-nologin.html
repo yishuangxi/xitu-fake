@@ -1,5 +1,5 @@
 <div class="main">
-    <div class="container" data-sel="left-nav">
+    <div class="container" data-sel="container">
         <!--左侧导航栏开始-->
         {%include "../index-left-nav.html"%}
         <!--左侧导航栏结束-->
@@ -16,7 +16,11 @@
             </div>
             {%include "../index-main-regist-entry.html"%}
         </div>
-        {%include "../index-main-register.html"%}
+        {%if user%}
+        {%else%}
+            {%include "../../../global/html/index-main-register.html"%}
+            {%include "../../../global/html/index-main-login.html"%}
+        {%end%}
         <!--主体内容结束-->
         <!--右侧导航栏开始-->
         {%include "../index-right-aside.html"%}
