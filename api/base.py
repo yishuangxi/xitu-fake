@@ -46,15 +46,7 @@ class ApiBase(RequestHandler):
         'msg': msg,
         'data': self.__json(data)
       }
-      self.write("""
-
-            try{
-                %s(%s)
-            }catch(err){
-
-            }
-
-            """ % (callback, self.__dumps(data)))
+      self.write("""try{%s(%s)}catch(err){console.log("rubby err: ", err)}""" % (callback, self.__dumps(data)))
 
   def json_err(self, msg=''):
     self.write({

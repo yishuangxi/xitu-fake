@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./vue.js"></script>
+
+  <style>
+.a-transition {
+  transition: all .3s ease;
+  height: 30px;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+/* .expand-enter 定义进入的开始状态 */
+/* .expand-leave 定义离开的结束状态 */
+.a-enter, .a-leave {
+  height: 0px;
+  opacity: 0;
+}
+
+    .b-transition{
+      transition: all 0.5s;
+      height: 50px;
+      background-color: #ffff4f;
+
+    }
+    .b-enter{height: 30px;
+      background-color: red;
+    }
+    .b-leave{
+      height: 0;
+       background-color:black;
+    }
+
+  </style>
+
+</head>
+<body >
+<div id="text">
+  <ul>
+    <li v-for="todo in todos" transition="a">
+      {{ todo.text}}--{{ result }}
+    </li>
+  </ul>
+</div>
+
+<div id="app">
+  <div id="name" v-if="show" transition="a">{{show}}----{{friend.name}}--{{friend.age}}--{{friend.sex}}</div>
+  <button @click="change" >change</button>
+</div>
+
+<div id="bpp">
+  <div v-if="show" transition="b">{{show}}</div>
+  <button @click="bb">hhhh</button>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="vue-demo.js"></script>
+</body>
+</html>

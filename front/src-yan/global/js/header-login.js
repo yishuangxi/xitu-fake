@@ -1,6 +1,7 @@
 /**
  * Created by db on 16/9/8.
  */
+
 ;(function(){
   $('[data-sel="list"]').click(function(event){    //点头相弹出退出登陆列表
     if($('[data-sel="list-content"]').css('display')=='none'){

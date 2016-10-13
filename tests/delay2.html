@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div style="height:1000px;border:1px solid red; "></div>
+<h1>图片在这里</h1>
+<img class="img" data-src="//img14.360buyimg.com/da/jfs/t3190/314/1851328948/105005/85c9936d/57d664fdN0bda0761.jpg">
+<h1>图片在这里</h1>
+<img class="img" data-src="//img14.360buyimg.com/da/jfs/t3190/314/1851328948/105005/85c9936d/57d664fdN0bda0761.jpg">
+<script type="text/javascript">
+
+  setTimeout(function () {
+    var img = document.querySelectorAll('.img')
+    for (var i = 0; i < img.length; i++) {
+      img[i].src = img[i].getAttribute('data-src')
+    }
+
+  }, 5000)
+</script>
+</body>
+</html>
